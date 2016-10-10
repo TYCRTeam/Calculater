@@ -138,7 +138,6 @@
 &emsp;&emsp;条件：已经成功注册账号。  
 &emsp;&emsp;测试用例如表2所示：  
 &emsp;&emsp;**<center>表2&emsp;账号登测试用例</center>**
-<center>
 <table class="table table-striped table-condensed" border="1" cellspacing="0" align="center">
 	<tr valign="middle" align="center">
 		<th>用例</th>
@@ -177,7 +176,6 @@
 		<td colspan="2">不允许有任何偏差</td>
 	</tr>
 </table>
-</center>
 &emsp;&emsp;测试资料：系统帮助与使用说明手册。
 
 ####&emsp;&emsp;测试3####
@@ -187,7 +185,6 @@
 &emsp;&emsp;条件：成功登录，进入软件菜单。  
 &emsp;&emsp;测试用例如表3所示：  
 &emsp;&emsp;**<center>表3&emsp;题目练习测试用例</center>**
-<center>
 <table class="table table-striped table-condensed" border="1" cellspacing="0" align="center">
 	<tr valign="middle" align="center">
 		<th>用例</th>
@@ -266,7 +263,6 @@
 		<td colspan="2">不允许有任何偏差</td>
 	</tr>
 </table>
-</center>
 &emsp;&emsp;测试资料：系统帮助与使用说明手册。
 
 ####&emsp;&emsp;测试4####
@@ -276,7 +272,6 @@
 &emsp;&emsp;条件：成功登录，完成3次练习测试。  
 &emsp;&emsp;测试用例如表4所示：  
 &emsp;&emsp;**<center>表4&emsp;得分记录测试用例</center>**
-<center>
 <table class="table table-striped table-condensed" border="1" cellspacing="0" align="center">
 	<tr valign="middle" align="center">
 		<th>用例</th>
@@ -315,7 +310,6 @@
 &emsp;&emsp;条件：进入主页。  
 &emsp;&emsp;测试用例如表5所示：  
 &emsp;&emsp;**<center>表5&emsp;退出功能测试用例</center>**
-<center>
 <table class="table table-striped table-condensed" border="1" cellspacing="0" align="center">
 	<tr valign="middle" align="center">
 		<th>用例</th>
@@ -339,7 +333,6 @@
 		<td colspan="2">不允许有任何偏差</td>
 	</tr>
 </table>
-</center>
 &emsp;&emsp;测试资料：系统帮助与使用说明手册。
 
 ##4、评价##
