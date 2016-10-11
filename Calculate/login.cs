@@ -27,9 +27,62 @@ namespace Calculate
         /// </summary>
         private void button_login_Click(object sender, EventArgs e)
         {
-            Form f_main = new main();
-            this.Hide();
-            f_main.ShowDialog();
+            DataBase.ConnectServerDataBase();
+            if (this.textBox_userId.Text != null && this.textBox_userPSW.Text != null)
+            {
+                string sql = "SELECT * FROM Users WHERE UserID = "+this.textBox_userId.Text.ToString().Trim()+"";
+                DataTable dt = new DataTable();                               
+                if (filterSql(sql) == 0)
+                {
+                    dt = DataBase.TableResult(sql);
+                    if (dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("用户名不存在！");
+                    }
+                    else
+                    {
+                        sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + " AND Password = " + this.textBox_userPSW.Text.ToString().Trim() + "";
+                        dt.Rows.Clear();
+                        dt = DataBase.TableResult(sql);
+                        if (dt.Rows.Count == 0)
+                        {
+                            MessageBox.Show("用户名和密码错误！");
+                        }
+                        else
+                        {
+                            Form f_main = new main();
+                            this.Hide();
+                            f_main.ShowDialog();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("输入了非法字符！");
+                }
+            }
+            
+        }
+
+        /// <summary>
+        /// 检测sql注入
+        /// </summary>
+        /// <param name="sSql"></param>
+        /// <returns></returns>
+        public  static int filterSql(string sSql)
+        {
+            int srcLen, decLen = 0;
+            sSql = sSql.ToLower().Trim();
+            srcLen = sSql.Length;
+            sSql = sSql.Replace("exec", "");
+            sSql = sSql.Replace("delete", "");
+            sSql = sSql.Replace("master", "");
+            sSql = sSql.Replace("truncate", "");
+            sSql = sSql.Replace("declare", "");
+            sSql = sSql.Replace("create", "");
+            sSql = sSql.Replace("xp_", "no");
+            decLen = sSql.Length;
+            if (srcLen == decLen) return 0; else return 1;
         }
 
         /// <summary>

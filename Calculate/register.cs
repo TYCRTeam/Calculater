@@ -26,7 +26,14 @@ namespace Calculate
         /// </summary>
         private void button_OK_Click(object sender, EventArgs e)
         {
-
+            if (this.textBox_email.Text.ToString().Trim() == "" || this.textBox_name.Text == "" || this.textBox_sex.Text.ToString().Trim() == "" || this.textBox_userPSW.Text.ToString().Trim() == "" || this.textBox_userPSWRe.Text.ToString().Trim() == "" || this.textBox_birth.Text.ToString().Trim() == "")
+            {
+                MessageBox.Show("带*的选项不能为空！");
+            }
+            else
+            {
+                DataBase.ConnectServerDataBase();
+            }
         }
 
         /// <summary>
