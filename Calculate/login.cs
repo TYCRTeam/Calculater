@@ -30,20 +30,30 @@ namespace Calculate
             DataBase.ConnectServerDataBase();
             if (this.textBox_userId.Text != null && this.textBox_userPSW.Text != null)
             {
-                string sql = "SELECT * FROM Users WHERE UserID = "+this.textBox_userId.Text.ToString().Trim()+" AND Password = "+this.textBox_userPSW.Text.ToString().Trim()+"";
+                string sql = "SELECT * FROM Users WHERE UserID = "+this.textBox_userId.Text.ToString().Trim()+"";
                 DataTable dt = new DataTable();                               
                 if (filterSql(sql) == 0)
                 {
                     dt = DataBase.TableResult(sql);
                     if (dt.Rows.Count == 0)
                     {
-                        MessageBox.Show("账号或密码错误！");
+                        MessageBox.Show("用户名不存在！");
                     }
                     else
                     {
-                        Form f_main = new main();
-                        this.Hide();
-                        f_main.ShowDialog();
+                        sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + " AND Password = " + this.textBox_userPSW.Text.ToString().Trim() + "";
+                        dt.Rows.Clear();
+                        dt = DataBase.TableResult(sql);
+                        if (dt.Rows.Count == 0)
+                        {
+                            MessageBox.Show("用户名和密码错误！");
+                        }
+                        else
+                        {
+                            Form f_main = new main();
+                            this.Hide();
+                            f_main.ShowDialog();
+                        }
                     }
                 }
                 else
