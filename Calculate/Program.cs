@@ -35,6 +35,18 @@ namespace Calculate
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new login());
         }
+
+        /// <summary>
+        /// 题目生成函数
+        /// 1.根据调用函数提供的hardid生成对应的题目，hardid取值：1.初级；2.中级；3.高级
+        /// 2.返回值以字符串形式呈现："公式"+","+"计算结果"
+        /// 作者：饶龙龙
+        /// 最后修改时间：2016-10-11
+        /// </summary>
+        static string MakeQuestion(int hardid)
+        {
+            return "";
+        }
     }
 
     /// <summary>
