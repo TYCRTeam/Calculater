@@ -1,6 +1,6 @@
-﻿using JohnHuang.Calculator;
+﻿using Calculate.Calculator;
 
-namespace JohnHuang.Calculator.Operators
+namespace Calculate.Calculator.Operators
 {
     // +
     internal class Add : Operator, BinaryOperator

@@ -1,4 +1,4 @@
-﻿namespace JohnHuang.Calculator.Operators
+﻿namespace Calculate.Calculator.Operators
 {
     // )
     internal class RBracket : Operator

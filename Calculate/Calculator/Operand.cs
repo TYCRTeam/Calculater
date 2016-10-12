@@ -1,4 +1,4 @@
-﻿namespace JohnHuang.Calculator
+﻿namespace Calculate.Calculator
 {
     // 操作数
     internal class Operand : Element

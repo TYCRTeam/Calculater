@@ -1,4 +1,4 @@
-﻿namespace JohnHuang.Calculator
+﻿namespace Calculate.Calculator
 {
     public interface BinaryOperator
     {

@@ -1,4 +1,4 @@
-﻿namespace JohnHuang.Calculator
+﻿namespace Calculate.Calculator
 {
     // 抽象元素
     internal abstract class Element

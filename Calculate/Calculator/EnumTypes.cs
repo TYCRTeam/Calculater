@@ -1,4 +1,4 @@
-﻿namespace JohnHuang.Calculator
+﻿namespace Calculate.Calculator
 {
     // 元素类型
     internal enum ElementType

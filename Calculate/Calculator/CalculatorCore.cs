@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-using JohnHuang.Calculator.Operators;
+using Calculate.Calculator.Operators;
 
-namespace JohnHuang.Calculator
+namespace Calculate.Calculator
 {
     // 公式计算帮助类
     public static class CalculatorCore

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JohnHuang.Calculator.Operators
+namespace Calculate.Calculator.Operators
 {
     // /
     internal class Divide : Operator, BinaryOperator
