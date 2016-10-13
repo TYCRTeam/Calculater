@@ -61,6 +61,8 @@
     <Compile Include="Calculator\CalculatorCore.cs" />
     <Compile Include="Calculator\Element.cs" />
     <Compile Include="Calculator\EnumTypes.cs" />
+    <Compile Include="Calculator\FormulaFactory.cs" />
+    <Compile Include="Calculator\Fraction.cs" />
     <Compile Include="Calculator\Operand.cs" />
     <Compile Include="Calculator\Operator.cs" />
     <Compile Include="Calculator\Operators\Add.cs" />
