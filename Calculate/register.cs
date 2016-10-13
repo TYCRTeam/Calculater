@@ -26,13 +26,37 @@ namespace Calculate
         /// </summary>
         private void button_OK_Click(object sender, EventArgs e)
         {
-            if (this.textBox_email.Text.ToString().Trim() == "" || this.textBox_name.Text == "" || this.textBox_sex.Text.ToString().Trim() == "" || this.textBox_userPSW.Text.ToString().Trim() == "" || this.textBox_userPSWRe.Text.ToString().Trim() == "" || this.textBox_birth.Text.ToString().Trim() == "")
+            string email = this.textBox_email.Text.ToString().Trim();
+            string password = this.textBox_userPSW.Text.ToString().Trim();
+            string passwordre = textBox_userPSWRe.Text.ToString().Trim();
+            string realname = textBox_name.Text.ToString().Trim();
+            string nation = textBox_nation.Text.ToString().Trim();
+            string province = textBox_province.Text.ToString().Trim();
+            string city = textBox_city.Text.ToString().Trim();
+            string school = textBox_school.Text.ToString().Trim();
+            string classname = this.textBox_classname.Text.ToString().Trim();
+            string sex = textBox_sex.Text.ToString().Trim();
+            string birthday = textBox_birth.Text.ToString().Trim();
+            if (email == "" || realname == "" || sex == "" || password == "" || passwordre == "" || birthday == "")
             {
                 MessageBox.Show("带*的选项不能为空！");
             }
             else
             {
-                DataBase.ConnectServerDataBase();
+                if (password != passwordre)
+                {
+                    MessageBox.Show("两次密码输入不一致！");
+                    return;
+                }
+               // DataBase.ConnectServerDataBase();
+                string sql = "INSERT INTO Users VALUES ('"+email+"','"+password +"','"+realname+"','"+nation+"','"+province+"','"+city+"','"+school+"','"+classname+"','"+sex+"','"+birthday+"')";
+                if (login.filterSql(sql) == 1)
+                {
+                    MessageBox.Show("输入了非法字符！");
+                    return;
+                }
+                DataBase.ExecuteNonQuery(sql);
+                this.Close();
             }
         }
 
@@ -43,7 +67,7 @@ namespace Calculate
         /// </summary>
         private void button_cancle_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

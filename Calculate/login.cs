@@ -27,11 +27,11 @@ namespace Calculate
         /// </summary>
         private void button_login_Click(object sender, EventArgs e)
         {
-            DataBase.ConnectServerDataBase();
+            //DataBase.ConnectServerDataBase();
             if (this.textBox_userId.Text != null && this.textBox_userPSW.Text != null)
             {
-                string sql = "SELECT * FROM Users WHERE UserID = "+this.textBox_userId.Text.ToString().Trim()+"";
-                DataTable dt = new DataTable();                               
+                string sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + "";
+                DataTable dt = new DataTable();
                 if (filterSql(sql) == 0)
                 {
                     dt = DataBase.TableResult(sql);
@@ -61,7 +61,6 @@ namespace Calculate
                     MessageBox.Show("输入了非法字符！");
                 }
             }
-            
         }
 
         /// <summary>
@@ -93,7 +92,8 @@ namespace Calculate
         /// </summary>
         private void button_register_Click(object sender, EventArgs e)
         {
-
+            Form register = new register();
+            register.Show();
         }
     }
 }

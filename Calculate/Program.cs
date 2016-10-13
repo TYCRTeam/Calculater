@@ -21,12 +21,12 @@ namespace Calculate
         public static int HardID = 1;
         //登录用户信息：
         public static string UserID = "";
-        public static string UaerName = "";
+        public static string UserName = "";
         //数据库连接字段：
-        public static string ServerIP = "127.0.0.1"; 
-        public static string DBName = "OMISv3"; 
+        public static string ServerIP = "59.67.78.68";
+        public static string DBName = "calculate"; 
         public static string DBUser = "sa";
-        public static string DBPass = "sa"; 
+        public static string DBPass = "TJNUoffice2012"; 
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>

@@ -37,8 +37,14 @@
             this.textBox_userPSW = new System.Windows.Forms.TextBox();
             this.textBox_userPSWRe = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox_clsaaname = new System.Windows.Forms.TextBox();
+            this.textBox_classname = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox_school = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -53,12 +59,6 @@
             this.textBox_sex = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_name = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,7 +139,7 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.textBox_clsaaname);
+            this.groupBox1.Controls.Add(this.textBox_classname);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.textBox_school);
             this.groupBox1.Controls.Add(this.label9);
@@ -167,6 +167,60 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "注册信息";
             // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(285, 175);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 12);
+            this.label17.TabIndex = 30;
+            this.label17.Text = "*";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(285, 145);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(11, 12);
+            this.label16.TabIndex = 29;
+            this.label16.Text = "*";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(285, 116);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(11, 12);
+            this.label15.TabIndex = 28;
+            this.label15.Text = "*";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(285, 87);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(11, 12);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "*";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(285, 58);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(11, 12);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(285, 29);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(11, 12);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "*";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -176,12 +230,12 @@
             this.label11.TabIndex = 23;
             this.label11.Text = "班级：";
             // 
-            // textBox_clsaaname
+            // textBox_classname
             // 
-            this.textBox_clsaaname.Location = new System.Drawing.Point(112, 319);
-            this.textBox_clsaaname.Name = "textBox_clsaaname";
-            this.textBox_clsaaname.Size = new System.Drawing.Size(167, 21);
-            this.textBox_clsaaname.TabIndex = 24;
+            this.textBox_classname.Location = new System.Drawing.Point(112, 319);
+            this.textBox_classname.Name = "textBox_classname";
+            this.textBox_classname.Size = new System.Drawing.Size(167, 21);
+            this.textBox_classname.TabIndex = 24;
             // 
             // label10
             // 
@@ -295,60 +349,6 @@
             this.textBox_name.Size = new System.Drawing.Size(167, 21);
             this.textBox_name.TabIndex = 10;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(285, 29);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(11, 12);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "*";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(285, 58);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(11, 12);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "*";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(285, 87);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(11, 12);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "*";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(285, 116);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(11, 12);
-            this.label15.TabIndex = 28;
-            this.label15.Text = "*";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(285, 145);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(11, 12);
-            this.label16.TabIndex = 29;
-            this.label16.Text = "*";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(285, 175);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(11, 12);
-            this.label17.TabIndex = 30;
-            this.label17.Text = "*";
-            // 
             // register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -377,7 +377,7 @@
         private System.Windows.Forms.TextBox textBox_userPSWRe;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox textBox_clsaaname;
+        private System.Windows.Forms.TextBox textBox_classname;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox_school;
         private System.Windows.Forms.Label label9;
