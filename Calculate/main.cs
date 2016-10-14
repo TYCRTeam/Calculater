@@ -16,5 +16,15 @@ namespace Calculate
             InitializeComponent();
         }
 
+        private void main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void main_Load(object sender, EventArgs e)
+        {
+            this.label_username.Text = Program.UserName;
+        }
+
     }
 }

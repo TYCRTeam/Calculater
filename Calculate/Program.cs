@@ -14,7 +14,7 @@ namespace Calculate
     static class Program
     {
        //用于描述当前使用的是文件数据库还是数据库服务器
-        public static bool FileDatabase = true;
+        public static bool FileDatabase = false;
         //用于保存所有数据信息的文件地址
         public static string DataFileName = "\\data\\OMISv3.sdf";
         //用于存储当前全局的难易程度：1.初级；2.中级；3.高级

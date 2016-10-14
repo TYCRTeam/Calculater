@@ -69,5 +69,24 @@ namespace Calculate
         {
             this.Close();
         }
+
+        private void register_Load(object sender, EventArgs e)
+        {
+            DataTable dt = DataBase.TableResult("SELECT MAX(UserID) FROM Users");
+            this.textBox_userid.Text = (Convert.ToInt16(dt.Rows[0][0].ToString().Trim()) + 1).ToString();
+        }
+
+        private void textBox_birth_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.monthCalendar1.Visible = true;
+            this.textBox_birth.Enabled = false;
+        }
+
+        private void monthCalendar1_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            this.textBox_birth.Text = ""+this.monthCalendar1.SelectionStart.Year+"-"+this.monthCalendar1.SelectionStart.Month+"-"+this.monthCalendar1.SelectionStart.Day;
+            this.monthCalendar1.Visible = false;
+            this.textBox_birth.Enabled = true;
+        }
     }
 }

@@ -28,12 +28,21 @@ namespace Calculate
         private void button_login_Click(object sender, EventArgs e)
         {
             //DataBase.ConnectServerDataBase();
+            //DataTable dt = DataBase.TableResult("select * from Users");
+            //MessageBox.Show(""+dt.Rows.Count+"");
+            //DataBase.ConnectServerDataBase();
             if (this.textBox_userId.Text != null && this.textBox_userPSW.Text != null)
             {
-                string sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + "";
-                DataTable dt = new DataTable();
-                if (filterSql(sql) == 0)
+                if (this.textBox_userId.Text.ToString().Trim() == "" || this.textBox_userPSW.Text.ToString().Trim() == "") 
                 {
+                    MessageBox.Show("用户名或密码不能为空！");
+                    return;
+                }
+                
+                DataTable dt = new DataTable();
+                if (filterSql(this.textBox_userId.Text.ToString().Trim()) == 0 && filterSql(this.textBox_userPSW.Text.ToString().Trim()) ==0 )
+                {
+                    string sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + "";
                     dt = DataBase.TableResult(sql);
                     if (dt.Rows.Count == 0)
                     {
@@ -50,6 +59,9 @@ namespace Calculate
                         }
                         else
                         {
+                            DataTable dt1=DataBase.TableResult("SELECT RealName FROM Users WHERE UserID="+this.textBox_userId.Text.ToString().Trim()+"");
+                            Program.UserID = this.textBox_userId.Text;
+                            Program.UserName = dt1.Rows[0][0].ToString();
                             Form f_main = new main();
                             this.Hide();
                             f_main.ShowDialog();
@@ -73,6 +85,8 @@ namespace Calculate
             int srcLen, decLen = 0;
             sSql = sSql.ToLower().Trim();
             srcLen = sSql.Length;
+            sSql = sSql.Replace(" ","");
+            sSql = sSql.Replace("'","");
             sSql = sSql.Replace("exec", "");
             sSql = sSql.Replace("delete", "");
             sSql = sSql.Replace("master", "");
@@ -92,8 +106,8 @@ namespace Calculate
         /// </summary>
         private void button_register_Click(object sender, EventArgs e)
         {
-            Form register = new register();
-            register.Show();
+            Form re = new register();
+            re.Show();
         }
     }
 }

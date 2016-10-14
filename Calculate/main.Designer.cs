@@ -47,9 +47,11 @@
             this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
             this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ribbonComboBox1
@@ -181,6 +183,12 @@
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "个人信息";
             // 
+            // ribbonButton12
+            // 
+            this.ribbonButton12.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.Image")));
+            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
+            this.ribbonButton12.Text = "难度设置";
+            // 
             // ribbonPanel5
             // 
             this.ribbonPanel5.Items.Add(this.ribbonButton11);
@@ -192,21 +200,37 @@
             this.ribbonButton11.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton11.SmallImage")));
             this.ribbonButton11.Text = "帮助";
             // 
-            // ribbonButton12
+            // label1
             // 
-            this.ribbonButton12.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.Image")));
-            this.ribbonButton12.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton12.SmallImage")));
-            this.ribbonButton12.Text = "难度设置";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(888, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "欢迎：";
+            // 
+            // label_username
+            // 
+            this.label_username.AutoSize = true;
+            this.label_username.Location = new System.Drawing.Point(936, 13);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(0, 12);
+            this.label_username.TabIndex = 2;
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 688);
+            this.Controls.Add(this.label_username);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.rbbMain);
             this.Name = "main";
             this.Text = "四则运算";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.main_FormClosed);
+            this.Load += new System.EventHandler(this.main_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -233,6 +257,8 @@
         private System.Windows.Forms.RibbonButton ribbonButton12;
         private System.Windows.Forms.RibbonPanel ribbonPanel5;
         private System.Windows.Forms.RibbonButton ribbonButton11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_username;
 
     }
 }
