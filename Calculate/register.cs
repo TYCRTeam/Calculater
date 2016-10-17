@@ -88,5 +88,25 @@ namespace Calculate
             this.monthCalendar1.Visible = false;
             this.textBox_birth.Enabled = true;
         }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_userid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
