@@ -50,7 +50,7 @@ namespace Calculate
                 }
                // DataBase.ConnectServerDataBase();
                 string sql = "INSERT INTO Users VALUES ('"+email+"','"+password +"','"+realname+"','"+nation+"','"+province+"','"+city+"','"+school+"','"+classname+"','"+sex+"','"+birthday+"')";
-                if (login.filterSql(sql) == 1)
+                if (login.filterSql(email + password + realname + nation + province + city + school + classname + sex + birthday) == 1)
                 {
                     MessageBox.Show("输入了非法字符！");
                     return;

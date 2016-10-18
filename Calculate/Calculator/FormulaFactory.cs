@@ -21,12 +21,12 @@ namespace Calculate.Calculator
             
             for (int i = 0; i < operands.Length;i++ )
             {
-                operands[i] = ran.Next(1, 10);//构造四个操作数
+                operands[i] = ran.Next(1, 100);//构造四个操作数
                 if(i > 0) 
                 { 
                    while(operands[i]==operands[i-1])
                    {
-                       operands[i] = ran.Next(1,10);//确保操作数不相同
+                       operands[i] = ran.Next(1,100);//确保操作数不相同
                    }
                 }
             }

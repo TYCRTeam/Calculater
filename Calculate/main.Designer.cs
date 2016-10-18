@@ -35,8 +35,6 @@
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
             this.rbbStart = new System.Windows.Forms.RibbonButton();
             this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
@@ -52,6 +50,9 @@
             this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label_username = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonComboBox1
@@ -93,8 +94,6 @@
             // 
             this.ribbonPanel1.Items.Add(this.rbbStart);
             this.ribbonPanel1.Items.Add(this.ribbonButton2);
-            this.ribbonPanel1.Items.Add(this.ribbonButton3);
-            this.ribbonPanel1.Items.Add(this.ribbonButton4);
             this.ribbonPanel1.Text = "";
             // 
             // rbbStart
@@ -102,24 +101,13 @@
             this.rbbStart.Image = ((System.Drawing.Image)(resources.GetObject("rbbStart.Image")));
             this.rbbStart.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbbStart.SmallImage")));
             this.rbbStart.Text = "开始练习";
+            this.rbbStart.Click += new System.EventHandler(this.rbbStart_Click);
             // 
             // ribbonButton2
             // 
             this.ribbonButton2.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.Image")));
             this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
             this.ribbonButton2.Text = "错题回顾";
-            // 
-            // ribbonButton3
-            // 
-            this.ribbonButton3.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.Image")));
-            this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
-            this.ribbonButton3.Text = "下一题";
-            // 
-            // ribbonButton4
-            // 
-            this.ribbonButton4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.Image")));
-            this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
-            this.ribbonButton4.Text = "题目讲解";
             // 
             // ribbonTab2
             // 
@@ -217,11 +205,30 @@
             this.label_username.Size = new System.Drawing.Size(0, 12);
             this.label_username.TabIndex = 2;
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(0, 152);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1052, 537);
+            this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // ribbonButton1
+            // 
+            this.ribbonButton1.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.Image")));
+            this.ribbonButton1.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton1.SmallImage")));
+            // 
+            // ribbonButton13
+            // 
+            this.ribbonButton13.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.Image")));
+            this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1052, 688);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label_username);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbbMain);
@@ -242,8 +249,6 @@
         private System.Windows.Forms.RibbonPanel ribbonPanel1;
         private System.Windows.Forms.RibbonButton rbbStart;
         private System.Windows.Forms.RibbonButton ribbonButton2;
-        private System.Windows.Forms.RibbonButton ribbonButton3;
-        private System.Windows.Forms.RibbonButton ribbonButton4;
         private System.Windows.Forms.RibbonTab ribbonTab2;
         private System.Windows.Forms.RibbonPanel ribbonPanel3;
         private System.Windows.Forms.RibbonButton ribbonButton5;
@@ -259,6 +264,9 @@
         private System.Windows.Forms.RibbonButton ribbonButton11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label_username;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RibbonButton ribbonButton1;
+        private System.Windows.Forms.RibbonButton ribbonButton13;
 
     }
 }

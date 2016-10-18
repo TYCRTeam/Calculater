@@ -26,5 +26,19 @@ namespace Calculate
             this.label_username.Text = Program.UserName;
         }
 
+        private void rbbStart_Click(object sender, EventArgs e)
+        {
+            start.exercise ex = new start.exercise();
+            ex.TopLevel = false;
+            ex.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Add(ex);
+            ex.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }
