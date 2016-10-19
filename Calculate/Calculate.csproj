@@ -11,7 +11,8 @@
     <RootNamespace>Calculate</RootNamespace>
     <AssemblyName>Calculate</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -36,6 +37,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +57,20 @@
     <Compile Include="about\about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculator\BinaryOperator.cs" />
+    <Compile Include="Calculator\CalculatorCore.cs" />
+    <Compile Include="Calculator\Element.cs" />
+    <Compile Include="Calculator\EnumTypes.cs" />
+    <Compile Include="Calculator\FormulaFactory.cs" />
+    <Compile Include="Calculator\Fraction.cs" />
+    <Compile Include="Calculator\Operand.cs" />
+    <Compile Include="Calculator\Operator.cs" />
+    <Compile Include="Calculator\Operators\Add.cs" />
+    <Compile Include="Calculator\Operators\Cut.cs" />
+    <Compile Include="Calculator\Operators\Divide.cs" />
+    <Compile Include="Calculator\Operators\LBracket.cs" />
+    <Compile Include="Calculator\Operators\Mutiply.cs" />
+    <Compile Include="Calculator\Operators\RBracket.cs" />
     <Compile Include="check\testGrade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +122,12 @@
     <Compile Include="start\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="start\test_setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start\test_setting.Designer.cs">
+      <DependentUpon>test_setting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="check\testGrade.resx">
       <DependentUpon>testGrade.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +148,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
@@ -133,6 +159,10 @@
     <EmbeddedResource Include="start\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="start\test_setting.resx">
+      <DependentUpon>test_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
