@@ -205,15 +205,15 @@ namespace Calculate.start
                         if (this.radioButton_right.Checked == false && this.radioButton_wrong.Checked == false) { MessageBox.Show("请选择！"); return; }
                         bool answer = false;
                         if (this.radioButton_right.Checked == true) { answer = true; }
-                        if (this.radioButton_wrong.Checked == false) { answer = false; }
-                        if ((this.textBox_answer.Text.ToString().Trim() == this.realAnswer)^answer)
+                        if (this.radioButton_wrong.Checked == true) { answer = false; }
+                        if (!((this.textBox_answer.Text.ToString().Trim() == this.realAnswer)^answer))
                         {
                             this.textBox_log.AppendText("" + this.label_title.Text + this.textBox_answer.Text + "               正确            " + DateTime.Now.ToString() + "\r\n");
                             set_type();
                         }
                         else
                         {
-                            this.textBox_log.AppendText("" + this.label_title.Text + this.textBox_answer.Text + "               错误            " + DateTime.Now.ToString() + "\r\n");
+                            this.textBox_log.AppendText("" + this.label_title.Text + this.realAnswer + "               错误            " + DateTime.Now.ToString() + "\r\n");
                         }
                         break;
                     }

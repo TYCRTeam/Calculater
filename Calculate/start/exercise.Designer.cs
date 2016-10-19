@@ -37,8 +37,8 @@
             this.radioButton_c = new System.Windows.Forms.RadioButton();
             this.radioButton_d = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton_right = new System.Windows.Forms.RadioButton();
             this.radioButton_wrong = new System.Windows.Forms.RadioButton();
+            this.radioButton_right = new System.Windows.Forms.RadioButton();
             this.button_submit = new System.Windows.Forms.Button();
             this.button_jump = new System.Windows.Forms.Button();
             this.label_RightResult = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // textBox_answer
             // 
             this.textBox_answer.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox_answer.Location = new System.Drawing.Point(428, 88);
+            this.textBox_answer.Location = new System.Drawing.Point(466, 88);
             this.textBox_answer.Name = "textBox_answer";
             this.textBox_answer.Size = new System.Drawing.Size(100, 47);
             this.textBox_answer.TabIndex = 2;
@@ -149,18 +149,6 @@
             this.panel1.Size = new System.Drawing.Size(444, 148);
             this.panel1.TabIndex = 7;
             // 
-            // radioButton_right
-            // 
-            this.radioButton_right.AutoSize = true;
-            this.radioButton_right.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.radioButton_right.Location = new System.Drawing.Point(17, 18);
-            this.radioButton_right.Name = "radioButton_right";
-            this.radioButton_right.Size = new System.Drawing.Size(70, 25);
-            this.radioButton_right.TabIndex = 3;
-            this.radioButton_right.TabStop = true;
-            this.radioButton_right.Text = "正确";
-            this.radioButton_right.UseVisualStyleBackColor = true;
-            // 
             // radioButton_wrong
             // 
             this.radioButton_wrong.AutoSize = true;
@@ -172,6 +160,18 @@
             this.radioButton_wrong.TabStop = true;
             this.radioButton_wrong.Text = "错误";
             this.radioButton_wrong.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_right
+            // 
+            this.radioButton_right.AutoSize = true;
+            this.radioButton_right.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.radioButton_right.Location = new System.Drawing.Point(17, 18);
+            this.radioButton_right.Name = "radioButton_right";
+            this.radioButton_right.Size = new System.Drawing.Size(70, 25);
+            this.radioButton_right.TabIndex = 3;
+            this.radioButton_right.TabStop = true;
+            this.radioButton_right.Text = "正确";
+            this.radioButton_right.UseVisualStyleBackColor = true;
             // 
             // button_submit
             // 
@@ -199,7 +199,7 @@
             // 
             this.label_RightResult.AutoSize = true;
             this.label_RightResult.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_RightResult.Location = new System.Drawing.Point(551, 100);
+            this.label_RightResult.Location = new System.Drawing.Point(589, 100);
             this.label_RightResult.Name = "label_RightResult";
             this.label_RightResult.Size = new System.Drawing.Size(123, 35);
             this.label_RightResult.TabIndex = 10;
@@ -255,28 +255,28 @@
             this.ToolStripMenuItem_all.Checked = true;
             this.ToolStripMenuItem_all.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ToolStripMenuItem_all.Name = "ToolStripMenuItem_all";
-            this.ToolStripMenuItem_all.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem_all.Size = new System.Drawing.Size(100, 22);
             this.ToolStripMenuItem_all.Text = "随机";
             this.ToolStripMenuItem_all.Click += new System.EventHandler(this.ToolStripMenuItem_all_Click);
             // 
             // ToolStripMenuItem_choose
             // 
             this.ToolStripMenuItem_choose.Name = "ToolStripMenuItem_choose";
-            this.ToolStripMenuItem_choose.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem_choose.Size = new System.Drawing.Size(100, 22);
             this.ToolStripMenuItem_choose.Text = "选择";
             this.ToolStripMenuItem_choose.Click += new System.EventHandler(this.ToolStripMenuItem_choose_Click);
             // 
             // ToolStripMenuItem_black
             // 
             this.ToolStripMenuItem_black.Name = "ToolStripMenuItem_black";
-            this.ToolStripMenuItem_black.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem_black.Size = new System.Drawing.Size(100, 22);
             this.ToolStripMenuItem_black.Text = "填空";
             this.ToolStripMenuItem_black.Click += new System.EventHandler(this.ToolStripMenuItem_black_Click);
             // 
             // ToolStripMenuItem_judge
             // 
             this.ToolStripMenuItem_judge.Name = "ToolStripMenuItem_judge";
-            this.ToolStripMenuItem_judge.Size = new System.Drawing.Size(152, 22);
+            this.ToolStripMenuItem_judge.Size = new System.Drawing.Size(100, 22);
             this.ToolStripMenuItem_judge.Text = "判断";
             this.ToolStripMenuItem_judge.Click += new System.EventHandler(this.ToolStripMenuItem_judge_Click);
             // 

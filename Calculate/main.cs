@@ -28,6 +28,7 @@ namespace Calculate
 
         private void rbbStart_Click(object sender, EventArgs e)
         {
+            this.panel1.Controls.Clear();
             start.exercise ex = new start.exercise();
             ex.TopLevel = false;
             ex.FormBorderStyle = FormBorderStyle.None;
@@ -38,6 +39,16 @@ namespace Calculate
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ribbonButton5_Click(object sender, EventArgs e)
+        {
+            start.test tx = new start.test();
+            tx.TopLevel = false;
+            tx.FormBorderStyle = FormBorderStyle.None;
+            this.panel1.Controls.Clear();
+            this.panel1.Controls.Add(tx);
+            tx.Show();
         }
 
     }
