@@ -12,9 +12,10 @@ namespace Calculate.start
     public partial class test : Form
     {
         public static int chooseNum = 20;
+        public static int time=40;
         public static int judgeNum = 20;
         public static int blackNum = 60;
-        public  static int titleCount=100;
+        public static int titleCount = chooseNum + judgeNum + blackNum;
         public string[][] arry=new string[titleCount][];
         private static int current_num=0;
         private string[,] answer = new string[titleCount,2];
@@ -26,6 +27,7 @@ namespace Calculate.start
 
         private void test_Load(object sender, EventArgs e)
         {
+            this.label1.Text = "第" + (current_num+1).ToString() + "题：";
             for (int i = 0; i < titleCount; i++) 
             { 
                 Button bt = new Button();
@@ -51,6 +53,7 @@ namespace Calculate.start
             Button bt = sender as Button;
             int tag = Convert.ToInt16(bt.Tag);
             current_num=tag;
+            this.label1.Text = "第" + current_num + "题：";
             set_type(tag);
         }
 
@@ -240,6 +243,7 @@ namespace Calculate.start
             }
             if (current_num == 0) { return; }
             current_num--;
+            this.label1.Text = "第" + (current_num + 1).ToString() + "题：";
             set_type(current_num);
         }
 
@@ -251,6 +255,7 @@ namespace Calculate.start
             }
             if (current_num == (titleCount - 1)) { return; }
             current_num++;
+            this.label1.Text = "第" + (current_num + 1).ToString() + "题：";
             set_type(current_num);
         }
 

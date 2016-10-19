@@ -122,6 +122,12 @@
     <Compile Include="start\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
     </Compile>
+    <Compile Include="start\test_setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start\test_setting.Designer.cs">
+      <DependentUpon>test_setting.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="check\testGrade.resx">
       <DependentUpon>testGrade.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="start\test.resx">
       <DependentUpon>test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start\test_setting.resx">
+      <DependentUpon>test_setting.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

@@ -45,6 +45,7 @@
             this.button_next = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button_submit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -221,11 +222,21 @@
             this.button_submit.UseVisualStyleBackColor = true;
             this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(139, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "label1";
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 498);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.button_next);
             this.Controls.Add(this.button_forword);
@@ -263,6 +274,7 @@
         private System.Windows.Forms.Button button_next;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button_submit;
+        private System.Windows.Forms.Label label1;
 
     }
 }
