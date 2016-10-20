@@ -53,6 +53,7 @@
             // button_login
             // 
             this.button_login.BackColor = System.Drawing.Color.Transparent;
+            this.button_login.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_login.FlatAppearance.BorderSize = 0;
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Image = ((System.Drawing.Image)(resources.GetObject("button_login.Image")));
@@ -66,6 +67,7 @@
             // button_register
             // 
             this.button_register.BackColor = System.Drawing.Color.Transparent;
+            this.button_register.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_register.FlatAppearance.BorderSize = 0;
             this.button_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_register.Image = ((System.Drawing.Image)(resources.GetObject("button_register.Image")));
@@ -131,8 +133,12 @@
             this.Controls.Add(this.button_register);
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "login";
-            this.Text = "登陆";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "系统登录";
             this.ResumeLayout(false);
             this.PerformLayout();
 

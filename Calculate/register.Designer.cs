@@ -436,6 +436,7 @@
             this.Controls.Add(this.button_cancle);
             this.Controls.Add(this.button_OK);
             this.Name = "register";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户注册";
             this.Load += new System.EventHandler(this.register_Load);
             this.groupBox1.ResumeLayout(false);

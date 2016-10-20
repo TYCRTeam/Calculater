@@ -107,7 +107,7 @@ namespace Calculate
         private void button_register_Click(object sender, EventArgs e)
         {
             Form re = new register();
-            re.Show();
+            re.ShowDialog();
         }
 
         private void label3_Click(object sender, EventArgs e)

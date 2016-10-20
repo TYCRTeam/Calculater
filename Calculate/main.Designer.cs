@@ -76,7 +76,7 @@
             this.rbbMain.OrbImage = null;
             this.rbbMain.OrbStyle = System.Windows.Forms.RibbonOrbStyle.Office_2013;
             this.rbbMain.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.rbbMain.Size = new System.Drawing.Size(1052, 155);
+            this.rbbMain.Size = new System.Drawing.Size(1052, 136);
             this.rbbMain.TabIndex = 0;
             this.rbbMain.Tabs.Add(this.ribbonTab1);
             this.rbbMain.Tabs.Add(this.ribbonTab2);
@@ -98,7 +98,7 @@
             // 
             // rbbStart
             // 
-            this.rbbStart.Image = ((System.Drawing.Image)(resources.GetObject("rbbStart.Image")));
+            this.rbbStart.Image = global::Calculate.Properties.Resources.start;
             this.rbbStart.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbbStart.SmallImage")));
             this.rbbStart.Text = "开始练习";
             this.rbbStart.Click += new System.EventHandler(this.rbbStart_Click);
@@ -124,7 +124,7 @@
             // 
             // ribbonButton5
             // 
-            this.ribbonButton5.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.Image")));
+            this.ribbonButton5.Image = global::Calculate.Properties.Resources.start;
             this.ribbonButton5.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton5.SmallImage")));
             this.ribbonButton5.Text = "开始测验";
             this.ribbonButton5.Click += new System.EventHandler(this.ribbonButton5_Click);
@@ -208,9 +208,10 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(0, 152);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 136);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1052, 537);
+            this.panel1.Size = new System.Drawing.Size(1052, 552);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -233,7 +234,10 @@
             this.Controls.Add(this.label_username);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rbbMain);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "四则运算";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.main_FormClosed);
             this.Load += new System.EventHandler(this.main_Load);

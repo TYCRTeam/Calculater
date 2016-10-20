@@ -27,6 +27,7 @@ namespace Calculate
         public static string DBName = "calculate"; 
         public static string DBUser = "sa";
         public static string DBPass = "TJNUoffice2012"; 
+
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
