@@ -22,7 +22,7 @@ namespace Calculate.Calculator
             return result;
         }
 
-        // 将字符串解释为公式元素列表
+        // 将字符串解释为公式元素列表（中缀->前缀表达式）?
         private static List<Element> ParseFormula(string formula)
         {
             List<Element> elements = new List<Element>();
@@ -156,6 +156,7 @@ namespace Calculate.Calculator
                 else
                 {
                     CalculateMgr(curOperator, operators, operands, ref hasPriority);
+
                 }
             }
         }
@@ -258,7 +259,8 @@ namespace Calculate.Calculator
                         rightOperand = Convert.ToDouble(operands.Pop().Val);
                         leftOperand = Convert.ToDouble(operands.Pop().Val);
                         tmp = ((BinaryOperator)curOperator).Operate(leftOperand,rightOperand);
-                        operands.Push(new Operand(){ Val = tmp });
+
+                        operands.Push(new Operand(){ Val = tmp });//生成了新的操作数，即出现了计算过程
                     }
                     break;
             }
