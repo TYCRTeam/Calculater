@@ -8,6 +8,8 @@ using System.Diagnostics;
 using System.Data;
 using Calculate.Calculator;
 using System.Text;
+using System.Net.Mail;
+using System.Net;
 
 namespace Calculate
 {
@@ -370,4 +372,50 @@ namespace Calculate
         }
 
     }
+
+    public class SendEmail
+    { 
+        public static string _to;///接收端***@163.com
+        public static string _from;///发送端
+        public static string psd;///密码
+        public static string _subject;///标题
+        public static string _body;///正文
+        public static void send()
+        {   
+           
+            try
+            {
+                
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress(_from);
+                //可以利用MailMessage.To.Add方法增加要发送的邮件地址  
+                //message.To.Add(new MailAddress("290611579@qq.com"));
+                message.To.Add(new MailAddress(_to));
+                message.Subject = _subject;
+                message.Body = _body;
+
+                //添加附件  
+                //Attachment a = new Attachment(@"C:/Users/Administrator/Desktop/smtpclient.rar");
+                //message.Attachments.Add(a);
+                //设置邮箱的地址或IP  
+                SmtpClient client = new SmtpClient("smtp.163.com");
+                //设置邮箱端口，pop3端口:110, smtp端口是:25   
+                client.Port = 25;
+
+                //设置超时时间  
+                client.Timeout = 9999;
+
+                //要输入邮箱用户名与密码  
+
+                client.Credentials = new NetworkCredential(_from, psd);
+                client.Send(message);
+            }
+            catch (Exception ex)
+            {
+                //Success = ex.ToString();
+            }  
+        }
+    }
+
+
 }
