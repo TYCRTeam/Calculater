@@ -89,10 +89,6 @@ namespace Calculate
             this.textBox_birth.Enabled = true;
         }
 
-
-
-
-
         private void label17_Click(object sender, EventArgs e)
         {
 

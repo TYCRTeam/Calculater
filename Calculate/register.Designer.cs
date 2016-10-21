@@ -435,6 +435,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button_cancle);
             this.Controls.Add(this.button_OK);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "用户注册";

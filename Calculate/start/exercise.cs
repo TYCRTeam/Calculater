@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Diagnostics;
 
 namespace Calculate.start
 {
     public partial class exercise : Form
     {
         private string realAnswer;
+        private int type = 0;
         public exercise()
         {
             InitializeComponent();
@@ -83,23 +85,25 @@ namespace Calculate.start
             set_type();
         }
 
+        public void setRedam()
+        {
+            long tick = DateTime.Now.Ticks;
+            Random re = new Random((int)(tick & 0xffffffffL));
+            type = re.Next(1, 4);
+            switch (type)
+            {
+                case 1: set_black(); break;
+                case 2: set_choose(); break;
+                case 3: set_judge(); break;
+            }
+        }
 
-        
-        
+
         private void set_type()//设置题型界面 
         {
-            int type=1;
-            if (this.ToolStripMenuItem_all.Checked == true) 
+            switch (type)
             {
-                long tick = DateTime.Now.Ticks;
-                Random re = new Random((int)(tick & 0xffffffffL));
-                type = re.Next(1, 4);
-            }
-            if (this.ToolStripMenuItem_black.Checked == true) { type = 1; }
-            if (this.ToolStripMenuItem_choose.Checked == true) { type = 2; }
-            if (this.ToolStripMenuItem_judge.Checked == true) { type = 3; }
-            switch (type) 
-            {
+                case 0: setRedam(); break;
                 case 1: set_black(); break;
                 case 2: set_choose(); break;
                 case 3: set_judge(); break;
@@ -114,17 +118,20 @@ namespace Calculate.start
             this.realAnswer = arry[1];
         }
 
-        private void set_black()///设置填空题
+        public void set_black()///设置填空题
         {
+            type = 1;
             this.textBox_answer.Enabled = true;
             this.textBox_answer.Text = "";
             give_title(Program.HardID);
+            this.textBox_answer.Left = this.label_title.Left + label_title.Width + 5;
             this.panel1.Visible = false;
             this.label_type.Text = "填空题：";
         }
 
-        private void set_choose()////设置选择题
+        public void set_choose()////设置选择题
         {
+            type = 2;
             this.radioButton_right.Visible = false;
             this.radioButton_wrong.Visible = false;
             this.radioButton_a.Visible = true;
@@ -133,6 +140,7 @@ namespace Calculate.start
             this.radioButton_d.Visible = true;
             this.label_type.Text = "选择题：";
             give_title(Program.HardID);
+            this.textBox_answer.Left = this.label_title.Left + label_title.Width + 5;
             this.textBox_answer.Text = "";
             this.textBox_answer.Enabled = false;
             this.panel1.Visible = true;
@@ -163,8 +171,9 @@ namespace Calculate.start
             }
         }
 
-        private void set_judge()///设置判断题
+        public void set_judge()///设置判断题
         {
+            type = 3;
             this.radioButton_right.Visible = true;
             this.radioButton_wrong.Visible = true;
             this.radioButton_a.Visible = false;
@@ -174,6 +183,7 @@ namespace Calculate.start
             this.panel1.Visible = true;
             this.label_type.Text = "判断题：";
             give_title(Program.HardID);
+            this.textBox_answer.Left = this.label_title.Left + label_title.Width + 5;
             this.textBox_answer.Text = "";
             this.textBox_answer.Enabled = false;
             this.panel1.Visible = true ;
@@ -181,7 +191,16 @@ namespace Calculate.start
             this.radioButton_wrong.Text = "错误";
             long tick = DateTime.Now.Ticks;
             Random re = new Random((int)(tick & 0xffffffffL));
-            this.textBox_answer.Text = (Convert.ToInt32(this.realAnswer) + re.Next(-3, 3)).ToString();
+            //Debug.WriteLine(this.realAnswer);
+            if (this.realAnswer.IndexOf("/") > -1)
+            {
+                string[] str = this.realAnswer.Split(new char[] { '/' });
+                this.textBox_answer.Text = (int.Parse(str[0]) + re.Next(-3, 3)).ToString() + "/" + (int.Parse(str[1]) + re.Next(-3, 3)).ToString();
+            }
+            else
+            {
+                this.textBox_answer.Text = (int.Parse(this.realAnswer) + re.Next(-3, 3)).ToString();
+            }
         }
 
         private void button_submit_Click(object sender, EventArgs e)

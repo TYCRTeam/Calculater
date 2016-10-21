@@ -57,9 +57,10 @@
             this.button_login.FlatAppearance.BorderSize = 0;
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login.Image = ((System.Drawing.Image)(resources.GetObject("button_login.Image")));
-            this.button_login.Location = new System.Drawing.Point(91, 182);
+            this.button_login.Location = new System.Drawing.Point(90, 187);
+            this.button_login.Margin = new System.Windows.Forms.Padding(0);
             this.button_login.Name = "button_login";
-            this.button_login.Size = new System.Drawing.Size(71, 43);
+            this.button_login.Size = new System.Drawing.Size(68, 32);
             this.button_login.TabIndex = 1;
             this.button_login.UseVisualStyleBackColor = false;
             this.button_login.Click += new System.EventHandler(this.button_login_Click);
@@ -72,8 +73,9 @@
             this.button_register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_register.Image = ((System.Drawing.Image)(resources.GetObject("button_register.Image")));
             this.button_register.Location = new System.Drawing.Point(207, 187);
+            this.button_register.Margin = new System.Windows.Forms.Padding(0);
             this.button_register.Name = "button_register";
-            this.button_register.Size = new System.Drawing.Size(75, 33);
+            this.button_register.Size = new System.Drawing.Size(68, 32);
             this.button_register.TabIndex = 2;
             this.button_register.UseVisualStyleBackColor = false;
             this.button_register.Click += new System.EventHandler(this.button_register_Click);
@@ -134,6 +136,7 @@
             this.Controls.Add(this.button_login);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "login";

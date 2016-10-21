@@ -176,6 +176,30 @@
   <ItemGroup>
     <None Include="picture\start.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\help.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

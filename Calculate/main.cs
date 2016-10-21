@@ -11,8 +11,7 @@ namespace Calculate
 {
     public partial class main : Form
     {
-        public static int testTime=40;
-        public DateTime leaveTime = DateTime.Now.AddMinutes(testTime);
+        public start.exercise frmex;
         public main()
         {
             InitializeComponent();
@@ -30,12 +29,12 @@ namespace Calculate
 
         private void rbbStart_Click(object sender, EventArgs e)
         {
-            this.panel1.Controls.Clear();
-            start.exercise ex = new start.exercise();
-            ex.TopLevel = false;
-            ex.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Add(ex);
-            ex.Show();
+            frmex = new start.exercise();
+            frmex.MdiParent = this;
+            frmex.Dock = DockStyle.Fill;
+            frmex.TopMost = true;
+            frmex.FormBorderStyle = FormBorderStyle.None;
+            frmex.Show();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -45,22 +44,62 @@ namespace Calculate
 
         private void ribbonButton5_Click(object sender, EventArgs e)
         {
-            start.test_setting ts = new start.test_setting();
-            ts.Show();
             start.test tx = new start.test();
             tx.TopLevel = false;
             tx.FormBorderStyle = FormBorderStyle.None;
-            this.panel1.Controls.Clear();
-            this.panel1.Controls.Add(tx);
+            //this.panel1.Controls.Clear();
+            //this.panel1.Controls.Add(tx);
             tx.Show();
-            this.timer1.Interval = 1000;
-            this.timer1.Start(); 
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void ribbonButton3_Click(object sender, EventArgs e)
         {
-            this.label3.Text = (leaveTime - DateTime.Now).ToString();
-            this.label3.Refresh();
+            frmex.setRedam();
+        }
+
+        private void ribbonButton4_Click(object sender, EventArgs e)
+        {
+            frmex.set_choose();
+        }
+
+        private void ribbonButton14_Click(object sender, EventArgs e)
+        {
+            frmex.set_black();
+        }
+
+        private void ribbonButton15_Click(object sender, EventArgs e)
+        {
+            frmex.set_judge();
+        }
+
+        /// <summary>
+        /// 设置为初级
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton16_Click(object sender, EventArgs e)
+        {
+            Program.HardID = 0;
+        }
+
+        /// <summary>
+        /// 设置为中级
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton17_Click(object sender, EventArgs e)
+        {
+            Program.HardID = 1;
+        }
+
+        /// <summary>
+        /// 设置为高级
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton18_Click(object sender, EventArgs e)
+        {
+            Program.HardID = 2;
         }
 
     }
