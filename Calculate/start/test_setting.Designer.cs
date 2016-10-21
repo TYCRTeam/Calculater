@@ -97,6 +97,7 @@
             this.textBox_chooseNum.Name = "textBox_chooseNum";
             this.textBox_chooseNum.Size = new System.Drawing.Size(121, 21);
             this.textBox_chooseNum.TabIndex = 5;
+            this.textBox_chooseNum.Text = "20";
             // 
             // textBox_judgeNum
             // 
@@ -104,6 +105,7 @@
             this.textBox_judgeNum.Name = "textBox_judgeNum";
             this.textBox_judgeNum.Size = new System.Drawing.Size(121, 21);
             this.textBox_judgeNum.TabIndex = 6;
+            this.textBox_judgeNum.Text = "20";
             // 
             // textBox_blackNum
             // 
@@ -111,6 +113,7 @@
             this.textBox_blackNum.Name = "textBox_blackNum";
             this.textBox_blackNum.Size = new System.Drawing.Size(120, 21);
             this.textBox_blackNum.TabIndex = 7;
+            this.textBox_blackNum.Text = "40";
             // 
             // label5
             // 
@@ -127,6 +130,7 @@
             this.textBox_time.Name = "textBox_time";
             this.textBox_time.Size = new System.Drawing.Size(120, 21);
             this.textBox_time.TabIndex = 9;
+            this.textBox_time.Text = "40";
             // 
             // label6
             // 
@@ -145,6 +149,7 @@
             this.button_ok.TabIndex = 11;
             this.button_ok.Text = "确定";
             this.button_ok.UseVisualStyleBackColor = true;
+            this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
             // 
             // button_cancle
             // 

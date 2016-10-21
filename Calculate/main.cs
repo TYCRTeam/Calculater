@@ -11,6 +11,8 @@ namespace Calculate
 {
     public partial class main : Form
     {
+        public static int testTime=40;
+        public DateTime leaveTime = DateTime.Now.AddMinutes(testTime);
         public main()
         {
             InitializeComponent();
@@ -43,12 +45,22 @@ namespace Calculate
 
         private void ribbonButton5_Click(object sender, EventArgs e)
         {
+            start.test_setting ts = new start.test_setting();
+            ts.Show();
             start.test tx = new start.test();
             tx.TopLevel = false;
             tx.FormBorderStyle = FormBorderStyle.None;
             this.panel1.Controls.Clear();
             this.panel1.Controls.Add(tx);
             tx.Show();
+            this.timer1.Interval = 1000;
+            this.timer1.Start(); 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.label3.Text = (leaveTime - DateTime.Now).ToString();
+            this.label3.Refresh();
         }
 
     }

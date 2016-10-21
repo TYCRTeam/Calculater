@@ -15,5 +15,10 @@ namespace Calculate.start
         {
             InitializeComponent();
         }
+
+        private void button_ok_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
