@@ -46,6 +46,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button_submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblUsedtime = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -212,6 +213,11 @@
             this.button_next.UseVisualStyleBackColor = true;
             this.button_next.Click += new System.EventHandler(this.button_next_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // button_submit
             // 
             this.button_submit.Location = new System.Drawing.Point(851, 104);
@@ -231,11 +237,21 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "label1";
             // 
+            // lblUsedtime
+            // 
+            this.lblUsedtime.AutoSize = true;
+            this.lblUsedtime.Location = new System.Drawing.Point(788, 28);
+            this.lblUsedtime.Name = "lblUsedtime";
+            this.lblUsedtime.Size = new System.Drawing.Size(65, 12);
+            this.lblUsedtime.TabIndex = 20;
+            this.lblUsedtime.Text = "当前用时：";
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 498);
+            this.Controls.Add(this.lblUsedtime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_submit);
             this.Controls.Add(this.button_next);
@@ -275,6 +291,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button_submit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsedtime;
 
     }
 }

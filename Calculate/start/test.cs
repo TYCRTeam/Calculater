@@ -20,6 +20,8 @@ namespace Calculate.start
         private static int current_num=0;
         private string[,] answer = new string[titleCount,2];
         private string[,] opinion = new string[20, 4];
+        private DateTime starttime;
+        private double usedtime;
         public test()
         {
             InitializeComponent();
@@ -29,7 +31,8 @@ namespace Calculate.start
         {
             this.label1.Text = "第" + (current_num+1).ToString() + "题：";
             for (int i = 0; i < titleCount; i++) 
-            { 
+            {
+                Application.DoEvents();
                 Button bt = new Button();
                 bt.Size = new Size(35,25);
                 bt.Text = (i + 1).ToString();
@@ -42,6 +45,23 @@ namespace Calculate.start
             }
             give_title(titleCount);
             set_type(current_num);
+            StartTest();
+        }
+
+        private void StartTest()
+        {
+            starttime = DateTime.Now;
+            timer1.Start();
+        }
+
+        public void PoseTest()
+        {
+            timer1.Stop();
+        }
+
+        public void RestartTest()
+        {
+            timer1.Start();
         }
 
         private void bt_Click(object sender, EventArgs e) 
@@ -274,6 +294,13 @@ namespace Calculate.start
             }
 
             MessageBox.Show(wrong);
+            Program.Intest = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            usedtime += 1;
+            lblUsedtime.Text = "当前用时：" + DateTime.Parse("1990-1-1 00:40:00").AddSeconds(-usedtime).ToString("mm:ss");
         }
     }
 }

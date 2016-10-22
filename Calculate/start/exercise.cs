@@ -48,6 +48,10 @@ namespace Calculate.start
         private void button_jump_Click(object sender, EventArgs e)
         {
             this.textBox_log.AppendText("" + this.label_title.Text + this.textBox_answer.Text + "               跳过            " + DateTime.Now.ToString() + "\r\n");
+            panel1.Visible = true;
+            pnlPath.Visible = false;
+            btnNext.Visible = false;
+            button_jump.Visible = true;
             set_type();
         }
 
@@ -177,12 +181,34 @@ namespace Calculate.start
                 case "填空题：":
                     if (this.textBox_answer.Text.ToString().Trim() == this.realAnswer) 
                     {
+                        pnlPath.Visible = false;
+                        piBW.Visible = false;
+                        lblW.Visible = false;
+                        pnlPath.Visible = true;
+                        pibRight.Visible = true;
+                        lblRight.Visible = true;
                         this.textBox_log.AppendText(""+this.label_title.Text + this.textBox_answer.Text + "               正确            " + DateTime.Now.ToString()+"\r\n");
+                        Application.DoEvents();
+                        Thread.Sleep(2000);
+                        pnlPath.Visible = false;
+                        pibRight.Visible = false;
+                        lblRight.Visible = false;
+                        btnNext.Visible = false;
+                        button_jump.Visible = true;
                         set_type();
                     }
                     else
                     {
+                        pnlPath.Visible = false;
+                        pibRight.Visible = false;
+                        lblRight.Visible = false;
+                        pnlPath.Visible = true;
+                        piBW.Visible = true;
+                        lblW.Visible = true;
+                        btnNext.Visible = true;
+                        button_jump.Visible = false;
                         this.textBox_log.AppendText("" + this.label_title.Text + this.textBox_answer.Text + "               错误            " + DateTime.Now.ToString() + "\r\n");
+                        SaveNewError();
                     }
                     break;
                 case "判断题：":
@@ -193,21 +219,60 @@ namespace Calculate.start
                         if (this.radioButton_wrong.Checked == true) { answer = false; }
                         if (!((this.textBox_answer.Text.ToString().Trim() == this.realAnswer)^answer))
                         {
+                            pnlPath.Visible = false;
+                            piBW.Visible = false;
+                            lblW.Visible = false;
+                            pnlPath.Visible = true;
+                            pibRight.Visible = true;
+                            lblRight.Visible = true;
                             this.textBox_log.AppendText("" + this.label_title.Text + this.textBox_answer.Text + "               正确            " + DateTime.Now.ToString() + "\r\n");
+                            Application.DoEvents();
+                            Thread.Sleep(2000);
+                            pnlPath.Visible = false;
+                            pibRight.Visible = false;
+                            lblRight.Visible = false;
+                            btnNext.Visible = false;
+                            button_jump.Visible = true;
                             set_type();
                         }
                         else
                         {
+                            pnlPath.Visible = false;
+                            pibRight.Visible = false;
+                            lblRight.Visible = false;
+                            pnlPath.Visible = true;
+                            piBW.Visible = true;
+                            lblW.Visible = true;
+                            btnNext.Visible = true;
+                            button_jump.Visible = false;
                             this.textBox_log.AppendText("" + this.label_title.Text + this.realAnswer + "               错误            " + DateTime.Now.ToString() + "\r\n");
+                            SaveNewError();
                         }
                         break;
                     }
             }
         }
 
-        
-       
+        /// <summary>
+        /// 保存一个错误题目
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void SaveNewError()
+        {
+            DataTable dt = Program.ErrorSet.Tables[0];
+            DataRow dr = dt.NewRow();
 
+            dr["UserID"] = Program.UserID;
+            dr["Title"] = label_title.Text;
+            dr["Result"] = this.realAnswer;
+            dr["ErrorResult"] = textBox_answer.Text;
+            dr["HardID"] = Program.HardID;
+            dr["Time"] = DateTime.Now.ToString("yyyy-MM-dd HH:mmm:ss");
+            
+            dt.Rows.Add(dr);
+            Program.ErrorSet.WriteXml(Program.ErrorXML);
+        }
        
 
     }

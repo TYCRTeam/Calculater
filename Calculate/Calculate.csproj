@@ -202,6 +202,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calculator.net.ico" />
+    <None Include="picture\w.png" />
+    <None Include="picture\ok.png" />
     <None Include="picture\next.png" />
     <None Include="picture\yes.png" />
   </ItemGroup>

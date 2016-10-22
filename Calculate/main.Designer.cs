@@ -33,36 +33,37 @@
             this.rbbMain = new System.Windows.Forms.Ribbon();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label_username = new System.Windows.Forms.Label();
             this.rbbStart = new System.Windows.Forms.RibbonButton();
             this.ribbonButton2 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton14 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton15 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton20 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton21 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton12 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton16 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton17 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton18 = new System.Windows.Forms.RibbonButton();
+            this.ribbonButton22 = new System.Windows.Forms.RibbonButton();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton11 = new System.Windows.Forms.RibbonButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_username = new System.Windows.Forms.Label();
             this.ribbonButton1 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton13 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton19 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton20 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton21 = new System.Windows.Forms.RibbonButton();
             this.SuspendLayout();
             // 
             // ribbonComboBox1
@@ -107,62 +108,6 @@
             this.ribbonPanel1.Items.Add(this.ribbonButton2);
             this.ribbonPanel1.Text = "";
             // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.Items.Add(this.ribbonButton3);
-            this.ribbonPanel2.Items.Add(this.ribbonButton4);
-            this.ribbonPanel2.Items.Add(this.ribbonButton14);
-            this.ribbonPanel2.Items.Add(this.ribbonButton15);
-            this.ribbonPanel2.Text = "";
-            // 
-            // ribbonTab2
-            // 
-            this.ribbonTab2.Panels.Add(this.ribbonPanel3);
-            this.ribbonTab2.Text = "模拟测验";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.Items.Add(this.ribbonButton5);
-            this.ribbonPanel3.Items.Add(this.ribbonButton6);
-            this.ribbonPanel3.Items.Add(this.ribbonButton7);
-            this.ribbonPanel3.Items.Add(this.ribbonButton9);
-            this.ribbonPanel3.Text = "";
-            // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab3.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab3.Text = "系统设置";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.ribbonButton8);
-            this.ribbonPanel4.Items.Add(this.ribbonButton10);
-            this.ribbonPanel4.Items.Add(this.ribbonButton12);
-            this.ribbonPanel4.Text = "";
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.ribbonButton11);
-            this.ribbonPanel5.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(888, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 12);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "欢迎：";
-            // 
-            // label_username
-            // 
-            this.label_username.AutoSize = true;
-            this.label_username.Location = new System.Drawing.Point(936, 13);
-            this.label_username.Name = "label_username";
-            this.label_username.Size = new System.Drawing.Size(0, 12);
-            this.label_username.TabIndex = 2;
-            // 
             // rbbStart
             // 
             this.rbbStart.Image = global::Calculate.Properties.Resources.start;
@@ -175,6 +120,14 @@
             this.ribbonButton2.Image = global::Calculate.Properties.Resources.notebook;
             this.ribbonButton2.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton2.SmallImage")));
             this.ribbonButton2.Text = "错题回顾";
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.Items.Add(this.ribbonButton3);
+            this.ribbonPanel2.Items.Add(this.ribbonButton4);
+            this.ribbonPanel2.Items.Add(this.ribbonButton14);
+            this.ribbonPanel2.Items.Add(this.ribbonButton15);
+            this.ribbonPanel2.Text = "";
             // 
             // ribbonButton3
             // 
@@ -204,6 +157,19 @@
             this.ribbonButton15.Text = "判断题";
             this.ribbonButton15.Click += new System.EventHandler(this.ribbonButton15_Click);
             // 
+            // ribbonTab2
+            // 
+            this.ribbonTab2.Panels.Add(this.ribbonPanel3);
+            this.ribbonTab2.Text = "模拟测验";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.Items.Add(this.ribbonButton5);
+            this.ribbonPanel3.Items.Add(this.ribbonButton6);
+            this.ribbonPanel3.Items.Add(this.ribbonButton7);
+            this.ribbonPanel3.Items.Add(this.ribbonButton9);
+            this.ribbonPanel3.Text = "";
+            // 
             // ribbonButton5
             // 
             this.ribbonButton5.Image = global::Calculate.Properties.Resources.start;
@@ -216,6 +182,7 @@
             this.ribbonButton6.Image = global::Calculate.Properties.Resources.pause;
             this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
             this.ribbonButton6.Text = "暂停计时";
+            this.ribbonButton6.Click += new System.EventHandler(this.ribbonButton6_Click);
             // 
             // ribbonButton7
             // 
@@ -229,6 +196,20 @@
             this.ribbonButton9.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton9.SmallImage")));
             this.ribbonButton9.Text = "学习曲线";
             // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Panels.Add(this.ribbonPanel4);
+            this.ribbonTab3.Panels.Add(this.ribbonPanel5);
+            this.ribbonTab3.Text = "系统设置";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.ribbonButton8);
+            this.ribbonPanel4.Items.Add(this.ribbonButton10);
+            this.ribbonPanel4.Items.Add(this.ribbonButton12);
+            this.ribbonPanel4.Items.Add(this.ribbonButton22);
+            this.ribbonPanel4.Text = "";
+            // 
             // ribbonButton8
             // 
             this.ribbonButton8.DropDownItems.Add(this.ribbonButton19);
@@ -238,6 +219,30 @@
             this.ribbonButton8.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.SmallImage")));
             this.ribbonButton8.Style = System.Windows.Forms.RibbonButtonStyle.DropDown;
             this.ribbonButton8.Text = "界面风格";
+            // 
+            // ribbonButton19
+            // 
+            this.ribbonButton19.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonButton19.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.Image")));
+            this.ribbonButton19.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.SmallImage")));
+            this.ribbonButton19.Text = "稳重";
+            this.ribbonButton19.Click += new System.EventHandler(this.ribbonButton19_Click);
+            // 
+            // ribbonButton20
+            // 
+            this.ribbonButton20.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonButton20.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton20.Image")));
+            this.ribbonButton20.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton20.SmallImage")));
+            this.ribbonButton20.Text = "清新";
+            this.ribbonButton20.Click += new System.EventHandler(this.ribbonButton20_Click);
+            // 
+            // ribbonButton21
+            // 
+            this.ribbonButton21.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.ribbonButton21.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton21.Image")));
+            this.ribbonButton21.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton21.SmallImage")));
+            this.ribbonButton21.Text = "现代";
+            this.ribbonButton21.Click += new System.EventHandler(this.ribbonButton21_Click);
             // 
             // ribbonButton10
             // 
@@ -279,11 +284,39 @@
             this.ribbonButton18.Text = "高级";
             this.ribbonButton18.Click += new System.EventHandler(this.ribbonButton18_Click);
             // 
+            // ribbonButton22
+            // 
+            this.ribbonButton22.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton22.Image")));
+            this.ribbonButton22.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton22.SmallImage")));
+            this.ribbonButton22.Text = "测试设置";
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.ribbonButton11);
+            this.ribbonPanel5.Text = "";
+            // 
             // ribbonButton11
             // 
             this.ribbonButton11.Image = global::Calculate.Properties.Resources.help;
             this.ribbonButton11.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton11.SmallImage")));
             this.ribbonButton11.Text = "帮助";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(888, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 12);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "欢迎：";
+            // 
+            // label_username
+            // 
+            this.label_username.AutoSize = true;
+            this.label_username.Location = new System.Drawing.Point(936, 13);
+            this.label_username.Name = "label_username";
+            this.label_username.Size = new System.Drawing.Size(0, 12);
+            this.label_username.TabIndex = 2;
             // 
             // ribbonButton1
             // 
@@ -294,30 +327,6 @@
             // 
             this.ribbonButton13.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.Image")));
             this.ribbonButton13.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton13.SmallImage")));
-            // 
-            // ribbonButton19
-            // 
-            this.ribbonButton19.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonButton19.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.Image")));
-            this.ribbonButton19.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton19.SmallImage")));
-            this.ribbonButton19.Text = "稳重";
-            this.ribbonButton19.Click += new System.EventHandler(this.ribbonButton19_Click);
-            // 
-            // ribbonButton20
-            // 
-            this.ribbonButton20.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonButton20.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton20.Image")));
-            this.ribbonButton20.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton20.SmallImage")));
-            this.ribbonButton20.Text = "清新";
-            this.ribbonButton20.Click += new System.EventHandler(this.ribbonButton20_Click);
-            // 
-            // ribbonButton21
-            // 
-            this.ribbonButton21.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.ribbonButton21.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton21.Image")));
-            this.ribbonButton21.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton21.SmallImage")));
-            this.ribbonButton21.Text = "现代";
-            this.ribbonButton21.Click += new System.EventHandler(this.ribbonButton21_Click);
             // 
             // main
             // 
@@ -331,9 +340,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "四则运算";
+            this.TopMost = true;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.main_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.main_FormClosed);
             this.Load += new System.EventHandler(this.main_Load);
             this.ResumeLayout(false);
@@ -377,6 +389,7 @@
         private System.Windows.Forms.RibbonButton ribbonButton19;
         private System.Windows.Forms.RibbonButton ribbonButton20;
         private System.Windows.Forms.RibbonButton ribbonButton21;
+        private System.Windows.Forms.RibbonButton ribbonButton22;
 
     }
 }

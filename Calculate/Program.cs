@@ -31,6 +31,11 @@ namespace Calculate
         public static string DBPass = "TJNUoffice2012"; 
         //界面风格
         public static string ORBStyle = "Office_2013";
+        //测试过程中
+        public static bool Intest = false;
+        //错误题目xml文件地址
+        public static string ErrorXML = Application.StartupPath + "//Error.xml";
+        public static DataSet ErrorSet = new DataSet();
 
         /// <summary>
         /// 应用程序的主入口点。
