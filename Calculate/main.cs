@@ -25,6 +25,21 @@ namespace Calculate
         private void main_Load(object sender, EventArgs e)
         {
             this.label_username.Text = Program.UserName;
+            if (Program.ORBStyle.Equals("Office_2013"))
+            {
+                rbbMain.OrbStyle = RibbonOrbStyle.Office_2013; 
+                ribbonButton21.Checked = true;
+            }
+            else if (Program.ORBStyle.Equals("Office_2010"))
+            {
+                rbbMain.OrbStyle = RibbonOrbStyle.Office_2010;
+                ribbonButton20.Checked = true;
+            }
+            else
+            {
+                rbbMain.OrbStyle = RibbonOrbStyle.Office_2007;
+                ribbonButton19.Checked = true;
+            }
         }
 
         private void rbbStart_Click(object sender, EventArgs e)
@@ -37,11 +52,12 @@ namespace Calculate
             frmex.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
+        /// <summary>
+        /// 开始启动考试
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
         private void ribbonButton5_Click(object sender, EventArgs e)
         {
             start.test tx = new start.test();
@@ -52,24 +68,75 @@ namespace Calculate
             tx.Show();
         }
 
+        /// <summary>
+        /// 设置为随机类型题目
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
         private void ribbonButton3_Click(object sender, EventArgs e)
         {
-            frmex.setRedam();
+            ribbonButton3.Checked = true;
+            ribbonButton4.Checked = false;
+            ribbonButton14.Checked = false;
+            ribbonButton15.Checked = false;
+            if (frmex != null)
+            {
+                frmex.setRedam();
+            }
         }
 
+        /// <summary>
+        /// 设置为选择题型
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
         private void ribbonButton4_Click(object sender, EventArgs e)
         {
-            frmex.set_choose();
+            ribbonButton3.Checked = false;
+            ribbonButton4.Checked = true;
+            ribbonButton14.Checked = false;
+            ribbonButton15.Checked = false;
+            if (frmex != null)
+            {
+                frmex.set_choose();
+            }
+           
         }
 
+        /// <summary>
+        /// 设置为填空体型
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
         private void ribbonButton14_Click(object sender, EventArgs e)
         {
-            frmex.set_black();
+            ribbonButton3.Checked = false;
+            ribbonButton4.Checked = false;
+            ribbonButton14.Checked = true;
+            ribbonButton15.Checked = false;
+            if (frmex != null)
+            {
+                frmex.set_black();
+            }
+            
         }
 
+        /// <summary>
+        /// 设置为判断题型
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
         private void ribbonButton15_Click(object sender, EventArgs e)
         {
-            frmex.set_judge();
+            ribbonButton3.Checked = false;
+            ribbonButton4.Checked = false;
+            ribbonButton14.Checked = false;
+            ribbonButton15.Checked = true;
+            if (frmex != null)
+            {
+                frmex.set_judge();
+            }
+            
         }
 
         /// <summary>
@@ -100,6 +167,45 @@ namespace Calculate
         private void ribbonButton18_Click(object sender, EventArgs e)
         {
             Program.HardID = 2;
+        }
+
+        /// <summary>
+        /// 设置为界面为稳重风格
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton19_Click(object sender, EventArgs e)
+        {
+            ribbonButton19.Checked = true;
+            ribbonButton20.Checked = false;
+            ribbonButton21.Checked = false;
+            rbbMain.OrbStyle = RibbonOrbStyle.Office_2007;
+        }
+
+        /// <summary>
+        /// 设置为界面为清新风格
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton20_Click(object sender, EventArgs e)
+        {
+            ribbonButton19.Checked = false;
+            ribbonButton20.Checked = true;
+            ribbonButton21.Checked = false;
+            rbbMain.OrbStyle = RibbonOrbStyle.Office_2010;
+        }
+
+        /// <summary>
+        /// 设置为界面为现代风格
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton21_Click(object sender, EventArgs e)
+        {
+            ribbonButton19.Checked = false;
+            ribbonButton20.Checked = false;
+            ribbonButton21.Checked = true;
+            rbbMain.OrbStyle = RibbonOrbStyle.Office_2013;
         }
 
     }

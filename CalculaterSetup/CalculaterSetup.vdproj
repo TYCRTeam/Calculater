@@ -21,7 +21,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_794347460DCE429885F77231DA12D555"
+        "MsmKey" = "8:_933986CCE27E4250BB112EA6E4B69F53"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -34,13 +34,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9A50A12AEE5FFC824D177A626EBFE351"
+        "OwnerKey" = "8:_56D19FE8099044A988044B5013F634FD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_56D19FE8099044A988044B5013F634FD"
+        "OwnerKey" = "8:_9A50A12AEE5FFC824D177A626EBFE351"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -98,6 +98,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -127,9 +135,9 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_794347460DCE429885F77231DA12D555"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_933986CCE27E4250BB112EA6E4B69F53"
             {
-            "SourcePath" = "8:..\\Calculate\\bin\\Debug\\Calculator.net.ico"
+            "SourcePath" = "8:..\\Calculate\\Calculator.net.ico"
             "TargetName" = "8:Calculator.net.ico"
             "Tag" = "8:"
             "Folder" = "8:_3A2EA42C534E44A0ACE32894A8E18689"
@@ -377,7 +385,7 @@
             "Target" = "8:_56D19FE8099044A988044B5013F634FD"
             "Folder" = "8:_DF72AD4AE4234622BE2BB118C1BF6A2D"
             "WorkingFolder" = "8:_3A2EA42C534E44A0ACE32894A8E18689"
-            "Icon" = "8:_794347460DCE429885F77231DA12D555"
+            "Icon" = "8:_933986CCE27E4250BB112EA6E4B69F53"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B24F3A83B1BB4AB1ABBC47EFA9F492A1"
@@ -391,7 +399,7 @@
             "Target" = "8:_56D19FE8099044A988044B5013F634FD"
             "Folder" = "8:_BE0028F95EEA486A889221A8E9650524"
             "WorkingFolder" = "8:_3A2EA42C534E44A0ACE32894A8E18689"
-            "Icon" = "8:_794347460DCE429885F77231DA12D555"
+            "Icon" = "8:_933986CCE27E4250BB112EA6E4B69F53"
             "Feature" = "8:"
             }
         }

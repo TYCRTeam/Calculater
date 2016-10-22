@@ -43,41 +43,7 @@ namespace Calculate.start
         {
             this.textBox_answer.Text = this.radioButton_d.Text;
         }
-        
-        private void ToolStripMenuItem_choose_Click(object sender, EventArgs e)
-        {
-            this.ToolStripMenuItem_all.Checked = false;
-            this.ToolStripMenuItem_black.Checked = false;
-            this.ToolStripMenuItem_choose.Checked = true;
-            this.ToolStripMenuItem_judge.Checked = false;
-            set_type();
-        }
 
-        private void ToolStripMenuItem_all_Click(object sender, EventArgs e)
-        {
-            this.ToolStripMenuItem_all.Checked = true;
-            this.ToolStripMenuItem_black.Checked = false;
-            this.ToolStripMenuItem_choose.Checked = false;
-            this.ToolStripMenuItem_judge.Checked = false;
-        }
-
-        private void ToolStripMenuItem_black_Click(object sender, EventArgs e)
-        {
-            this.ToolStripMenuItem_all.Checked = false;
-            this.ToolStripMenuItem_black.Checked = true;
-            this.ToolStripMenuItem_choose.Checked = false;
-            this.ToolStripMenuItem_judge.Checked = false;
-            set_type();
-        }
-
-        private void ToolStripMenuItem_judge_Click(object sender, EventArgs e)
-        {
-            this.ToolStripMenuItem_all.Checked = false;
-            this.ToolStripMenuItem_black.Checked = false;
-            this.ToolStripMenuItem_choose.Checked = false;
-            this.ToolStripMenuItem_judge.Checked = true;
-            set_type();
-        } 
         
         private void button_jump_Click(object sender, EventArgs e)
         {
