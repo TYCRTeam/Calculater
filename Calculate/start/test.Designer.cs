@@ -47,6 +47,7 @@
             this.button_submit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUsedtime = new System.Windows.Forms.Label();
+            this.label_grade = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -246,11 +247,22 @@
             this.lblUsedtime.TabIndex = 20;
             this.lblUsedtime.Text = "当前用时：";
             // 
+            // label_grade
+            // 
+            this.label_grade.AutoSize = true;
+            this.label_grade.Location = new System.Drawing.Point(851, 161);
+            this.label_grade.Name = "label_grade";
+            this.label_grade.Size = new System.Drawing.Size(41, 12);
+            this.label_grade.TabIndex = 21;
+            this.label_grade.Text = "分数：";
+            this.label_grade.Visible = false;
+            // 
             // test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1036, 498);
+            this.Controls.Add(this.label_grade);
             this.Controls.Add(this.lblUsedtime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button_submit);
@@ -292,6 +304,7 @@
         private System.Windows.Forms.Button button_submit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUsedtime;
+        private System.Windows.Forms.Label label_grade;
 
     }
 }

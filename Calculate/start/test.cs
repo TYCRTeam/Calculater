@@ -6,22 +6,20 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace Calculate.start
 {
     public partial class test : Form
     {
-        public static int chooseNum = 20;
-        public static int time=40;
-        public static int judgeNum = 20;
-        public static int blackNum = 60;
-        public static int titleCount = chooseNum + judgeNum + blackNum;
+        public static int titleCount = Program.chooseNum + Program.judgeNum + Program.blackNum;
         public string[][] arry=new string[titleCount][];
         private static int current_num=0;
-        private string[,] answer = new string[titleCount,2];
-        private string[,] opinion = new string[20, 4];
+        private string[,] answer = new string[titleCount,3];
+        private string[,] opinion = new string[Program.chooseNum, 4];
         private DateTime starttime;
         private double usedtime;
+        ArrayList btnList = new ArrayList(titleCount);
         public test()
         {
             InitializeComponent();
@@ -34,6 +32,7 @@ namespace Calculate.start
             {
                 Application.DoEvents();
                 Button bt = new Button();
+                btnList.Add(bt);
                 bt.Size = new Size(35,25);
                 bt.Text = (i + 1).ToString();
                 bt.Name = "btn_" + i.ToString();
@@ -66,19 +65,36 @@ namespace Calculate.start
 
         private void bt_Click(object sender, EventArgs e) 
         {
-            if (this.textBox_answer.Text != null)
+            if (this.textBox_answer.Text.ToString().Trim() != "" && current_num >= Program.chooseNum + Program.judgeNum)
             {
+                answer[current_num, 2] = "1";
+            }
+            if (this.textBox_answer.Text != null)
+            {               
                 this.answer[current_num, 1] = this.textBox_answer.Text.ToString().Trim();
             }
             Button bt = sender as Button;
             int tag = Convert.ToInt16(bt.Tag);
+            if (this.answer[current_num, 2] == "1")
+            {
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[current_num];
+                setBTN_doneColor(bt1);
+            }
+            else
+            {
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[current_num];
+                bt1.BackColor = SystemColors.Control;
+            }
             current_num=tag;
-            this.label1.Text = "第" + current_num + "题：";
+            this.label1.Text = "第" + (current_num+1).ToString() + "题：";
             set_type(tag);
         }
 
         private void radioButton_Click(object sender, EventArgs e)
         {
+            this.answer[current_num, 2] = "1";
             RadioButton rb = sender as RadioButton;
             switch (rb.Tag.ToString())
             {
@@ -94,13 +110,16 @@ namespace Calculate.start
 
         private void set_type(int titleNum)////设置题目界面
         {
-            if (titleNum < chooseNum)
+            Button bt1 = new Button();
+            bt1 = (Button)btnList[titleNum];
+            setBTN_currentColor(bt1);
+            if (titleNum < Program.chooseNum)
             {
                 set_choose(titleNum);
             }
             else
             {
-                if (titleNum >= chooseNum && titleNum < chooseNum+judgeNum)
+                if (titleNum >= Program.chooseNum && titleNum < Program.chooseNum + Program.judgeNum)
                 {
                     set_judge(titleNum);
                 }
@@ -257,11 +276,28 @@ namespace Calculate.start
 
         private void button_forword_Click(object sender, EventArgs e)
         {
+            if (this.textBox_answer.Text.ToString().Trim() != "" && current_num >= Program.chooseNum + Program.judgeNum)
+            {
+                answer[current_num, 2] = "1";
+            }
             if (this.textBox_answer.Text != null)
             {
                 this.answer[current_num, 1] = this.textBox_answer.Text.ToString().Trim();
             }
             if (current_num == 0) { return; }
+            if (this.answer[current_num, 2] == "1")
+            { 
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[current_num];
+                setBTN_doneColor(bt1);
+            }
+            else
+            {
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[current_num];
+                bt1.BackColor = SystemColors.Control;
+            }
+
             current_num--;
             this.label1.Text = "第" + (current_num + 1).ToString() + "题：";
             set_type(current_num);
@@ -269,11 +305,27 @@ namespace Calculate.start
 
         private void button_next_Click(object sender, EventArgs e)
         {
+            if (this.textBox_answer.Text.ToString().Trim() != "" && current_num >= Program.chooseNum + Program.judgeNum)
+            {
+                answer[current_num, 2] = "1";
+            }
             if (this.textBox_answer.Text != null)
             {
-                this.answer[current_num, 1] = this.textBox_answer.Text.ToString().Trim();
+               this.answer[current_num, 1] = this.textBox_answer.Text.ToString().Trim();
             }
             if (current_num == (titleCount - 1)) { return; }
+            if (this.answer[current_num, 2] == "1")
+            {
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[current_num];
+                setBTN_doneColor(bt1);
+            }
+            else
+            {
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[current_num];
+                bt1.BackColor = SystemColors.Control; 
+            }
             current_num++;
             this.label1.Text = "第" + (current_num + 1).ToString() + "题：";
             set_type(current_num);
@@ -281,26 +333,85 @@ namespace Calculate.start
 
         private void button_submit_Click(object sender, EventArgs e)
         {
-            string wrong = "错误题目："; ;
+            int wrong = 0;
             for (int i = 0; i < titleCount; i++)
             {
                 if (answer[i, 1] != arry[i][1]) 
                 {
                     if (answer[i, 0] == "f")
+                    {
+                        Button bt = new Button();
+                        bt = (Button)btnList[i];
+                        setBTN_rightColor(bt);
                         continue;
+                    }
                     else
-                        wrong += (i + 1).ToString() + "、";
+                    {
+                        Button bt = new Button();
+                        bt = (Button)btnList[i];
+                        setBTN_wrongColor(bt);
+                        wrong++;
+                        continue;
+                    }
+                    
                 }
+                Button bt1 = new Button();
+                bt1 = (Button)btnList[i];
+                setBTN_rightColor(bt1);
+                continue;
             }
 
-            MessageBox.Show(wrong);
+            this.label_grade.Text = "分数：" + (100 - wrong * 100 / titleCount).ToString() + "";
+            this.label_grade.Visible = true;
             Program.Intest = false;
+            this.button_submit.Enabled = false;
+            PoseTest();
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             usedtime += 1;
-            lblUsedtime.Text = "当前用时：" + DateTime.Parse("1990-1-1 00:40:00").AddSeconds(-usedtime).ToString("mm:ss");
+            lblUsedtime.Text = "当前用时：" + DateTime.Parse("1990-1-1 00:"+Program.time.ToString()+":00").AddSeconds(-usedtime).ToString("mm:ss");
+        }
+
+
+
+        /// 修改已经做了的题目的btn样式，不返回任何结果
+        /// 作者：杨斌
+        /// 最后修改时间：2016-10-22
+        /// </summary>
+        public void setBTN_doneColor(Button bt)
+        {
+            bt.BackColor = Color.SlateGray;
+        }
+
+        /// 修改答对了的题目的btn样式，不返回任何结果
+        /// 作者：杨斌
+        /// 最后修改时间：2016-10-22
+        /// </summary>
+        public void setBTN_rightColor(Button bt)
+        {
+            bt.BackColor = Color.Green;
+        }
+
+        /// 修改答错了的题目的btn样式，不返回任何结果
+        /// 作者：杨斌
+        /// 最后修改时间：2016-10-22
+        /// </summary>
+        public void setBTN_wrongColor(Button bt)
+        {
+            bt.BackColor = Color.Red;
+        }
+
+
+        /// 修改当前的题目的btn样式，不返回任何结果
+        /// 作者：杨斌
+        /// 最后修改时间：2016-10-22
+        /// </summary>
+        public void setBTN_currentColor(Button bt)
+        {
+            bt.BackColor = Color.Yellow;
         }
     }
 }

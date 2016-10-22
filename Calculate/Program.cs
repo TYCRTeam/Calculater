@@ -36,6 +36,11 @@ namespace Calculate
         //错误题目xml文件地址
         public static string ErrorXML = Application.StartupPath + "//Error.xml";
         public static DataSet ErrorSet = new DataSet();
+        //test页面中的全局变量
+        public static int chooseNum = 20;///选择题目数
+        public static int time = 40;///时间
+        public static int judgeNum = 20;///判断题目数
+        public static int blackNum = 60;///填空题目数
 
         /// <summary>
         /// 应用程序的主入口点。
@@ -272,7 +277,7 @@ namespace Calculate
         private static string CEasyFormula(int[] opds, char[] ops)
         {
             string formula = null;
-            int temp;
+            //int temp;
             char op = ops[ran.Next(0, 3)];
             if (op == '-')
                 CompareAndChange(ref opds[0], ref opds[1]);
