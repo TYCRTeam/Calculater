@@ -43,23 +43,24 @@
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
             this.textBox_log = new System.Windows.Forms.TextBox();
             this.pnlPath = new System.Windows.Forms.Panel();
+            this.pibRight = new System.Windows.Forms.PictureBox();
+            this.lblW = new System.Windows.Forms.Label();
+            this.piBW = new System.Windows.Forms.PictureBox();
+            this.lblRight = new System.Windows.Forms.Label();
             this.button_explain = new System.Windows.Forms.Button();
             this.button_jump = new System.Windows.Forms.Button();
             this.button_submit = new System.Windows.Forms.Button();
-            this.piBW = new System.Windows.Forms.PictureBox();
-            this.pibRight = new System.Windows.Forms.PictureBox();
-            this.lblRight = new System.Windows.Forms.Label();
-            this.lblW = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlPath.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.piBW)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibRight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piBW)).BeginInit();
             this.SuspendLayout();
             // 
             // label_title
             // 
             this.label_title.AutoSize = true;
+            this.label_title.BackColor = System.Drawing.Color.Transparent;
             this.label_title.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_title.Location = new System.Drawing.Point(224, 100);
             this.label_title.Name = "label_title";
@@ -70,6 +71,7 @@
             // label_type
             // 
             this.label_type.AutoSize = true;
+            this.label_type.BackColor = System.Drawing.Color.Transparent;
             this.label_type.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_type.Location = new System.Drawing.Point(111, 42);
             this.label_type.Name = "label_type";
@@ -139,6 +141,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.radioButton_wrong);
             this.panel1.Controls.Add(this.radioButton_right);
             this.panel1.Controls.Add(this.radioButton_d);
@@ -177,6 +180,7 @@
             // label_RightResult
             // 
             this.label_RightResult.AutoSize = true;
+            this.label_RightResult.BackColor = System.Drawing.Color.Transparent;
             this.label_RightResult.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label_RightResult.Location = new System.Drawing.Point(589, 100);
             this.label_RightResult.Name = "label_RightResult";
@@ -208,69 +212,16 @@
             // 
             // pnlPath
             // 
+            this.pnlPath.BackColor = System.Drawing.Color.Transparent;
             this.pnlPath.Controls.Add(this.pibRight);
             this.pnlPath.Controls.Add(this.lblW);
             this.pnlPath.Controls.Add(this.piBW);
             this.pnlPath.Controls.Add(this.lblRight);
-            this.pnlPath.Location = new System.Drawing.Point(231, 151);
+            this.pnlPath.Location = new System.Drawing.Point(230, 151);
             this.pnlPath.Name = "pnlPath";
             this.pnlPath.Size = new System.Drawing.Size(534, 169);
             this.pnlPath.TabIndex = 14;
             this.pnlPath.Visible = false;
-            // 
-            // button_explain
-            // 
-            this.button_explain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_explain.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_explain.Image = global::Calculate.Properties.Resources.notebook;
-            this.button_explain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_explain.Location = new System.Drawing.Point(565, 336);
-            this.button_explain.Name = "button_explain";
-            this.button_explain.Size = new System.Drawing.Size(180, 49);
-            this.button_explain.TabIndex = 11;
-            this.button_explain.Text = "题目讲解";
-            this.button_explain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_explain.UseVisualStyleBackColor = true;
-            // 
-            // button_jump
-            // 
-            this.button_jump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_jump.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_jump.Image = global::Calculate.Properties.Resources.next;
-            this.button_jump.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_jump.Location = new System.Drawing.Point(385, 336);
-            this.button_jump.Name = "button_jump";
-            this.button_jump.Size = new System.Drawing.Size(124, 49);
-            this.button_jump.TabIndex = 9;
-            this.button_jump.Text = "跳过";
-            this.button_jump.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_jump.UseVisualStyleBackColor = true;
-            this.button_jump.Click += new System.EventHandler(this.button_jump_Click);
-            // 
-            // button_submit
-            // 
-            this.button_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_submit.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button_submit.Image = global::Calculate.Properties.Resources.yes;
-            this.button_submit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button_submit.Location = new System.Drawing.Point(230, 336);
-            this.button_submit.Name = "button_submit";
-            this.button_submit.Size = new System.Drawing.Size(123, 49);
-            this.button_submit.TabIndex = 8;
-            this.button_submit.Text = "提交";
-            this.button_submit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button_submit.UseVisualStyleBackColor = true;
-            this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
-            // 
-            // piBW
-            // 
-            this.piBW.Image = global::Calculate.Properties.Resources.w;
-            this.piBW.Location = new System.Drawing.Point(16, 18);
-            this.piBW.Name = "piBW";
-            this.piBW.Size = new System.Drawing.Size(125, 125);
-            this.piBW.TabIndex = 0;
-            this.piBW.TabStop = false;
-            this.piBW.Visible = false;
             // 
             // pibRight
             // 
@@ -281,17 +232,6 @@
             this.pibRight.TabIndex = 0;
             this.pibRight.TabStop = false;
             this.pibRight.Visible = false;
-            // 
-            // lblRight
-            // 
-            this.lblRight.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblRight.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblRight.Location = new System.Drawing.Point(152, 18);
-            this.lblRight.Name = "lblRight";
-            this.lblRight.Size = new System.Drawing.Size(367, 125);
-            this.lblRight.TabIndex = 1;
-            this.lblRight.Text = "正确!";
-            this.lblRight.Visible = false;
             // 
             // lblW
             // 
@@ -304,8 +244,78 @@
             this.lblW.Text = "错误！";
             this.lblW.Visible = false;
             // 
+            // piBW
+            // 
+            this.piBW.Image = global::Calculate.Properties.Resources.w;
+            this.piBW.Location = new System.Drawing.Point(16, 18);
+            this.piBW.Name = "piBW";
+            this.piBW.Size = new System.Drawing.Size(125, 125);
+            this.piBW.TabIndex = 0;
+            this.piBW.TabStop = false;
+            this.piBW.Visible = false;
+            // 
+            // lblRight
+            // 
+            this.lblRight.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblRight.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblRight.Location = new System.Drawing.Point(152, 18);
+            this.lblRight.Name = "lblRight";
+            this.lblRight.Size = new System.Drawing.Size(367, 125);
+            this.lblRight.TabIndex = 1;
+            this.lblRight.Text = "正确!";
+            this.lblRight.Visible = false;
+            // 
+            // button_explain
+            // 
+            this.button_explain.BackColor = System.Drawing.Color.Transparent;
+            this.button_explain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_explain.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_explain.Image = global::Calculate.Properties.Resources.notebook;
+            this.button_explain.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_explain.Location = new System.Drawing.Point(565, 336);
+            this.button_explain.Name = "button_explain";
+            this.button_explain.Size = new System.Drawing.Size(180, 49);
+            this.button_explain.TabIndex = 11;
+            this.button_explain.Text = "题目讲解";
+            this.button_explain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_explain.UseVisualStyleBackColor = false;
+            this.button_explain.Visible = false;
+            // 
+            // button_jump
+            // 
+            this.button_jump.BackColor = System.Drawing.Color.Transparent;
+            this.button_jump.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_jump.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_jump.Image = global::Calculate.Properties.Resources.next;
+            this.button_jump.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_jump.Location = new System.Drawing.Point(385, 336);
+            this.button_jump.Name = "button_jump";
+            this.button_jump.Size = new System.Drawing.Size(124, 49);
+            this.button_jump.TabIndex = 9;
+            this.button_jump.Text = "跳过";
+            this.button_jump.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_jump.UseVisualStyleBackColor = false;
+            this.button_jump.Click += new System.EventHandler(this.button_jump_Click);
+            // 
+            // button_submit
+            // 
+            this.button_submit.BackColor = System.Drawing.Color.Transparent;
+            this.button_submit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_submit.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button_submit.Image = global::Calculate.Properties.Resources.yes;
+            this.button_submit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button_submit.Location = new System.Drawing.Point(230, 336);
+            this.button_submit.Name = "button_submit";
+            this.button_submit.Size = new System.Drawing.Size(123, 49);
+            this.button_submit.TabIndex = 8;
+            this.button_submit.Text = "提交";
+            this.button_submit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button_submit.UseVisualStyleBackColor = false;
+            this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
+            // 
             // btnNext
             // 
+            this.btnNext.BackColor = System.Drawing.Color.Transparent;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNext.Font = new System.Drawing.Font("微软雅黑", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnNext.Image = global::Calculate.Properties.Resources.next;
@@ -316,7 +326,7 @@
             this.btnNext.TabIndex = 9;
             this.btnNext.Text = "下一题";
             this.btnNext.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.UseVisualStyleBackColor = false;
             this.btnNext.Visible = false;
             this.btnNext.Click += new System.EventHandler(this.button_jump_Click);
             // 
@@ -325,6 +335,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Calculate.Properties.Resources.bg4;
             this.ClientSize = new System.Drawing.Size(1036, 498);
             this.Controls.Add(this.textBox_log);
             this.Controls.Add(this.button_explain);
@@ -343,8 +354,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlPath.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.piBW)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pibRight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.piBW)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

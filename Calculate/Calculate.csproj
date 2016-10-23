@@ -49,6 +49,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>.\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about\about.cs">
@@ -110,6 +113,18 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores.Designer.cs">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start\errors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start\errors.Designer.cs">
+      <DependentUpon>errors.cs</DependentUpon>
+    </Compile>
     <Compile Include="start\exercise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +167,12 @@
     </Compile>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores.resx">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start\errors.resx">
+      <DependentUpon>errors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="start\exercise.resx">
       <DependentUpon>exercise.cs</DependentUpon>
@@ -202,6 +223,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calculator.net.ico" />
+    <None Include="picture\bg5.png" />
+    <None Include="picture\bg4.jpg" />
+    <None Include="picture\bg1.png" />
+    <None Include="picture\bg2.jpg" />
+    <None Include="picture\测试设置.png" />
+    <None Include="picture\判断.png" />
+    <None Include="picture\填空.png" />
+    <None Include="picture\选择.png" />
+    <None Include="picture\return.png" />
     <None Include="picture\w.png" />
     <None Include="picture\ok.png" />
     <None Include="picture\next.png" />

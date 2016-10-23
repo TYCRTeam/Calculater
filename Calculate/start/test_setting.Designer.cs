@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(test_setting));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 43);
+            this.label1.Location = new System.Drawing.Point(70, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 0;
@@ -81,33 +82,34 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "初级",
             "中级",
             "高级"});
-            this.comboBox1.Location = new System.Drawing.Point(103, 38);
+            this.comboBox1.Location = new System.Drawing.Point(113, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 20);
             this.comboBox1.TabIndex = 4;
             // 
             // textBox_chooseNum
             // 
-            this.textBox_chooseNum.Location = new System.Drawing.Point(103, 69);
+            this.textBox_chooseNum.Location = new System.Drawing.Point(113, 69);
             this.textBox_chooseNum.Name = "textBox_chooseNum";
             this.textBox_chooseNum.Size = new System.Drawing.Size(121, 21);
             this.textBox_chooseNum.TabIndex = 5;
             // 
             // textBox_judgeNum
             // 
-            this.textBox_judgeNum.Location = new System.Drawing.Point(103, 101);
+            this.textBox_judgeNum.Location = new System.Drawing.Point(113, 101);
             this.textBox_judgeNum.Name = "textBox_judgeNum";
             this.textBox_judgeNum.Size = new System.Drawing.Size(121, 21);
             this.textBox_judgeNum.TabIndex = 6;
             // 
             // textBox_blackNum
             // 
-            this.textBox_blackNum.Location = new System.Drawing.Point(104, 132);
+            this.textBox_blackNum.Location = new System.Drawing.Point(114, 132);
             this.textBox_blackNum.Name = "textBox_blackNum";
             this.textBox_blackNum.Size = new System.Drawing.Size(120, 21);
             this.textBox_blackNum.TabIndex = 7;
@@ -123,7 +125,7 @@
             // 
             // textBox_time
             // 
-            this.textBox_time.Location = new System.Drawing.Point(104, 162);
+            this.textBox_time.Location = new System.Drawing.Point(114, 162);
             this.textBox_time.Name = "textBox_time";
             this.textBox_time.Size = new System.Drawing.Size(120, 21);
             this.textBox_time.TabIndex = 9;
@@ -131,7 +133,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(228, 167);
+            this.label6.Location = new System.Drawing.Point(238, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 12);
             this.label6.TabIndex = 10;
@@ -145,6 +147,7 @@
             this.button_ok.TabIndex = 11;
             this.button_ok.Text = "确定";
             this.button_ok.UseVisualStyleBackColor = true;
+            this.button_ok.Click += new System.EventHandler(this.button_ok_Click);
             // 
             // button_cancle
             // 
@@ -154,12 +157,13 @@
             this.button_cancle.TabIndex = 12;
             this.button_cancle.Text = "取消";
             this.button_cancle.UseVisualStyleBackColor = true;
+            this.button_cancle.Click += new System.EventHandler(this.button_cancle_Click);
             // 
             // test_setting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 277);
+            this.ClientSize = new System.Drawing.Size(296, 268);
             this.Controls.Add(this.button_cancle);
             this.Controls.Add(this.button_ok);
             this.Controls.Add(this.label6);
@@ -173,8 +177,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "test_setting";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "考试设置";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.test_setting_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

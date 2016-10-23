@@ -14,6 +14,8 @@ namespace Calculate
     {
         public start.exercise frmex;
         public start.test frmtext;
+        public start.errors frmerror;
+        public Scores frmscores;
         public main()
         {
             InitializeComponent();
@@ -82,6 +84,32 @@ namespace Calculate
                     Program.ErrorSet.WriteXml(Program.ErrorXML);
                 }
             }
+            //加载成绩Dataset
+            if (!File.Exists(Program.ScoreXML))
+            {
+                //文件不存在，则生成
+                Program.ScoreSet = new DataSet();
+                DataTable dt = new DataTable("Scores");
+                dt.Columns.Add("UserID");
+                dt.Columns.Add("Score");
+                dt.Columns.Add("Time");
+                Program.ScoreSet.Tables.Add(dt);
+                Program.ScoreSet.WriteXml(Program.ScoreXML);
+            }
+            else
+            {
+                //如果文件存在，则直接加载
+                Program.ScoreSet.ReadXml(Program.ScoreXML);
+                if (Program.ScoreSet.Tables.Count == 0)
+                {
+                    DataTable dt = new DataTable("Scores");
+                    dt.Columns.Add("UserID");
+                    dt.Columns.Add("Score");
+                    dt.Columns.Add("Time");
+                    Program.ScoreSet.Tables.Add(dt);
+                    Program.ScoreSet.WriteXml(Program.ScoreXML);
+                }
+            }
 
             this.label_username.Text = Program.UserName;
             if (Program.ORBStyle.Equals("Office_2013"))
@@ -126,6 +154,22 @@ namespace Calculate
             frmtext.FormBorderStyle = FormBorderStyle.None;
             frmtext.Show();
             Program.Intest = true;
+            //其他按钮不可用
+            ribbonButton5.Enabled = false;
+            ribbonButton7.Enabled = false;
+            ribbonButton9.Enabled = false;
+        }
+
+        /// <summary>
+        /// 解除可用性
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        public void ResumeButton()
+        {
+            ribbonButton5.Enabled = true;
+            ribbonButton7.Enabled = true;
+            ribbonButton9.Enabled = true;
         }
 
         /// <summary>
@@ -287,7 +331,86 @@ namespace Calculate
             }
         }
 
-       
+        /// <summary>
+        /// 打开测试设置窗体
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton22_Click(object sender, EventArgs e)
+        {
+            start.test_setting frmset = new start.test_setting();
+            frmset.ShowDialog();
+        }
+
+        /// <summary>
+        /// 进入错题界面
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton2_Click(object sender, EventArgs e)
+        {
+            frmerror = new start.errors();
+            frmerror.MdiParent = this;
+            frmerror.Dock = DockStyle.Fill;
+            frmerror.TopMost = true;
+            frmerror.FormBorderStyle = FormBorderStyle.None;
+            frmerror.Show();
+        }
+
+        /// <summary>
+        /// 保存当前成绩
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton7_Click(object sender, EventArgs e)
+        {
+            if (frmtext != null && !Program.Intest)
+            {
+                DataTable dt = Program.ScoreSet.Tables[0];
+                DataRow dr = dt.NewRow();
+                dr["UserID"] = Program.UserID;
+                dr["Score"] = frmtext.label_grade.Text.Split(new char[]{'：'})[1];
+                dr["Time"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                dt.Rows.Add(dr);
+                Program.ScoreSet.WriteXml(Program.ScoreXML);
+            }
+        }
+
+        /// <summary>
+        /// 选择选项卡变化时
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void rbbMain_ActiveTabChanged(object sender, EventArgs e)
+        {
+            if (Program.Intest)
+            {
+                if (rbbMain.ActiveTab.Text.Equals("日常练习"))
+                {
+                    rbbMain.ActivateNextTab();
+                }
+                else if (rbbMain.ActiveTab.Text.Equals("系统设置"))
+                {
+                    rbbMain.ActivatePreviousTab();
+                }
+                //rbbMain.ActiveTab = ribbonTab2;
+            }
+        }
+
+        /// <summary>
+        /// 打开学习曲线界面
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton9_Click(object sender, EventArgs e)
+        {
+            frmscores = new Scores();
+            frmscores.MdiParent = this;
+            frmscores.Dock = DockStyle.Fill;
+            frmscores.TopMost = true;
+            frmscores.FormBorderStyle = FormBorderStyle.None;
+            frmscores.Show();
+        }
 
     }
 }

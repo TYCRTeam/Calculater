@@ -19,8 +19,8 @@ namespace Calculate
         public static bool FileDatabase = false;
         //用于保存所有数据信息的文件地址
         public static string DataFileName = "\\data\\OMISv3.sdf";
-        //用于存储当前全局的难易程度：1.初级；2.中级；3.高级
-        public static int HardID = 1;
+        //用于存储当前全局的难易程度：0.初级；1.中级；2.高级
+        public static int HardID = 0;
         //登录用户信息：
         public static string UserID = "";
         public static string UserName = "";
@@ -36,6 +36,10 @@ namespace Calculate
         //错误题目xml文件地址
         public static string ErrorXML = Application.StartupPath + "//Error.xml";
         public static DataSet ErrorSet = new DataSet();
+        //历史成绩文件地址
+        public static string ScoreXML = Application.StartupPath + "//Score.xml";
+        public static DataSet ScoreSet = new DataSet();
+
         //test页面中的全局变量
         public static int chooseNum = 20;///选择题目数
         public static int time = 40;///时间

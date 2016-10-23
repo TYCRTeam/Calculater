@@ -301,6 +301,8 @@ namespace Calculate.start
             current_num--;
             this.label1.Text = "第" + (current_num + 1).ToString() + "题：";
             set_type(current_num);
+            label_title.Left = label1.Left + label1.Width;
+            textBox_answer.Left = label_title.Left + label_title.Width;
         }
 
         private void button_next_Click(object sender, EventArgs e)
@@ -329,6 +331,9 @@ namespace Calculate.start
             current_num++;
             this.label1.Text = "第" + (current_num + 1).ToString() + "题：";
             set_type(current_num);
+            label_title.Left = label1.Left + label1.Width;
+            textBox_answer.Left = label_title.Left + label_title.Width;
+
         }
 
         private void button_submit_Click(object sender, EventArgs e)
@@ -366,13 +371,13 @@ namespace Calculate.start
             Program.Intest = false;
             this.button_submit.Enabled = false;
             PoseTest();
-            
+            ((main)this.MdiParent).ResumeButton();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             usedtime += 1;
-            lblUsedtime.Text = "当前用时：" + DateTime.Parse("1990-1-1 00:"+Program.time.ToString()+":00").AddSeconds(-usedtime).ToString("mm:ss");
+            lblUsedtime.Text = "倒计时：" + DateTime.Parse("1990-1-1 00:"+Program.time.ToString()+":00").AddSeconds(-usedtime).ToString("mm:ss");
         }
 
 
