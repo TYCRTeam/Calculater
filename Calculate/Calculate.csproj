@@ -11,7 +11,8 @@
     <RootNamespace>Calculate</RootNamespace>
     <AssemblyName>Calculate</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
@@ -36,6 +37,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +49,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph">
+      <HintPath>.\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="about\about.cs">
@@ -52,6 +60,20 @@
     <Compile Include="about\about.Designer.cs">
       <DependentUpon>about.cs</DependentUpon>
     </Compile>
+    <Compile Include="Calculator\BinaryOperator.cs" />
+    <Compile Include="Calculator\CalculatorCore.cs" />
+    <Compile Include="Calculator\Element.cs" />
+    <Compile Include="Calculator\EnumTypes.cs" />
+    <Compile Include="Calculator\FormulaFactory.cs" />
+    <Compile Include="Calculator\Fraction.cs" />
+    <Compile Include="Calculator\Operand.cs" />
+    <Compile Include="Calculator\Operator.cs" />
+    <Compile Include="Calculator\Operators\Add.cs" />
+    <Compile Include="Calculator\Operators\Cut.cs" />
+    <Compile Include="Calculator\Operators\Divide.cs" />
+    <Compile Include="Calculator\Operators\LBracket.cs" />
+    <Compile Include="Calculator\Operators\Mutiply.cs" />
+    <Compile Include="Calculator\Operators\RBracket.cs" />
     <Compile Include="check\testGrade.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +113,18 @@
     <Compile Include="register.Designer.cs">
       <DependentUpon>register.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scores.Designer.cs">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start\errors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start\errors.Designer.cs">
+      <DependentUpon>errors.cs</DependentUpon>
+    </Compile>
     <Compile Include="start\exercise.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +136,12 @@
     </Compile>
     <Compile Include="start\test.Designer.cs">
       <DependentUpon>test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start\test_setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start\test_setting.Designer.cs">
+      <DependentUpon>test_setting.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="check\testGrade.resx">
       <DependentUpon>testGrade.cs</DependentUpon>
@@ -123,9 +163,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="register.resx">
       <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scores.resx">
+      <DependentUpon>Scores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start\errors.resx">
+      <DependentUpon>errors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="start\exercise.resx">
       <DependentUpon>exercise.cs</DependentUpon>
@@ -133,6 +180,10 @@
     <EmbeddedResource Include="start\test.resx">
       <DependentUpon>test.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="start\test_setting.resx">
+      <DependentUpon>test_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -143,7 +194,49 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="picture\start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\notebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\set.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="picture\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Calculator.net.ico" />
+    <None Include="picture\bg5.png" />
+    <None Include="picture\bg4.jpg" />
+    <None Include="picture\bg1.png" />
+    <None Include="picture\bg2.jpg" />
+    <None Include="picture\测试设置.png" />
+    <None Include="picture\判断.png" />
+    <None Include="picture\填空.png" />
+    <None Include="picture\选择.png" />
+    <None Include="picture\return.png" />
+    <None Include="picture\w.png" />
+    <None Include="picture\ok.png" />
+    <None Include="picture\next.png" />
+    <None Include="picture\yes.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
