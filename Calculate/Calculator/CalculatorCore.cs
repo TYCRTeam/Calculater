@@ -22,7 +22,7 @@ namespace Calculate.Calculator
             return result;
         }
 
-        // 将字符串解释为公式元素列表（中缀->前缀表达式）?
+        // 将字符串解释为公式元素列表
         private static List<Element> ParseFormula(string formula)
         {
             List<Element> elements = new List<Element>();
@@ -156,6 +156,7 @@ namespace Calculate.Calculator
                 else
                 {
                     CalculateMgr(curOperator, operators, operands, ref hasPriority);
+					//如果operands中的内容发生了变化，说明计算产生了新的计算中间操作数，在此需生成一个计算过程式子
 
                 }
             }
