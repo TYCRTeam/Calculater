@@ -84,7 +84,7 @@
             this.textBox_answer.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.textBox_answer.Location = new System.Drawing.Point(466, 88);
             this.textBox_answer.Name = "textBox_answer";
-            this.textBox_answer.Size = new System.Drawing.Size(100, 47);
+            this.textBox_answer.Size = new System.Drawing.Size(172, 47);
             this.textBox_answer.TabIndex = 2;
             // 
             // radioButton_a
@@ -182,7 +182,7 @@
             this.label_RightResult.AutoSize = true;
             this.label_RightResult.BackColor = System.Drawing.Color.Transparent;
             this.label_RightResult.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label_RightResult.Location = new System.Drawing.Point(589, 100);
+            this.label_RightResult.Location = new System.Drawing.Point(644, 100);
             this.label_RightResult.Name = "label_RightResult";
             this.label_RightResult.Size = new System.Drawing.Size(129, 35);
             this.label_RightResult.TabIndex = 10;
@@ -335,7 +335,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::Calculate.Properties.Resources.bg4;
             this.ClientSize = new System.Drawing.Size(1036, 498);
             this.Controls.Add(this.textBox_log);
             this.Controls.Add(this.button_explain);

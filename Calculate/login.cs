@@ -42,7 +42,7 @@ namespace Calculate
                 DataTable dt = new DataTable();
                 if (filterSql(this.textBox_userId.Text.ToString().Trim()) == 0 && filterSql(this.textBox_userPSW.Text.ToString().Trim()) ==0 )
                 {
-                    string sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + "";
+                    string sql = "SELECT * FROM Users WHERE Email = '" + this.textBox_userId.Text.ToString().Trim() + "'";
                     dt = DataBase.TableResult(sql);
                     if (dt.Rows.Count == 0)
                     {
@@ -50,7 +50,7 @@ namespace Calculate
                     }
                     else
                     {
-                        sql = "SELECT * FROM Users WHERE UserID = " + this.textBox_userId.Text.ToString().Trim() + " AND Password = " + this.textBox_userPSW.Text.ToString().Trim() + "";
+                        sql = "SELECT * FROM Users WHERE Email = '" + this.textBox_userId.Text.ToString().Trim() + "' AND Password = '" + this.textBox_userPSW.Text.ToString().Trim() + "'";
                         dt.Rows.Clear();
                         dt = DataBase.TableResult(sql);
                         if (dt.Rows.Count == 0)
@@ -59,8 +59,33 @@ namespace Calculate
                         }
                         else
                         {
-                            DataTable dt1=DataBase.TableResult("SELECT RealName FROM Users WHERE UserID="+this.textBox_userId.Text.ToString().Trim()+"");
-                            Program.UserID = this.textBox_userId.Text;
+                            if (!label4.Visible)
+                            {
+                                if (!dt.Rows[0]["Validate"].ToString().Equals("1"))
+                                {
+                                    label4.Visible = true;
+                                    textBox1.Visible = true;
+                                    MessageBox.Show("首次登录本系统，请填写验证码！");
+                                    return;
+                                }
+                            }
+                            else
+                            {
+                                DataTable dtd = DataBase.TableResult("select * from Users where Email='" + this.textBox_userId.Text.ToString().Trim() + "' and RegCode='" + textBox1.Text + "'");
+                                if (dtd.Rows.Count > 0)
+                                {
+                                    DataBase.ExecuteNonQuery("update Users set Validate = 1 where Email='" + this.textBox_userId.Text.ToString().Trim() + "'");
+                                    MessageBox.Show("验证成功！");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("验证码输入错误！");
+                                    return;
+                                }
+                            }
+                            
+                            DataTable dt1 = DataBase.TableResult("SELECT RealName FROM Users WHERE Email='" + this.textBox_userId.Text.ToString().Trim() + "'");
+                            Program.UserID = dt.Rows[0][0].ToString();
                             Program.UserName = dt1.Rows[0][0].ToString();
                             Form f_main = new main();
                             this.Hide();
@@ -121,6 +146,11 @@ namespace Calculate
         }
 
         private void textBox_userPSW_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

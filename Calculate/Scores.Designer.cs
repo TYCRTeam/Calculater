@@ -81,7 +81,7 @@
             // 
             this.columnHeader3.Text = "时间";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 179;
+            this.columnHeader3.Width = 229;
             // 
             // Scores
             // 

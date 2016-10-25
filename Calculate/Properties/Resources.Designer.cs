@@ -81,6 +81,13 @@ namespace Calculate.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap bg21 {
+            get {
+                object obj = ResourceManager.GetObject("bg21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap bg4 {
             get {
                 object obj = ResourceManager.GetObject("bg4", resourceCulture);
