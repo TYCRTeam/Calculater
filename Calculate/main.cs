@@ -129,6 +129,11 @@ namespace Calculate
             }
         }
 
+        /// <summary>
+        /// 保存一个错误题目
+        /// 作者：饶龙龙
+        /// 最后修改时间：2016-10-20
+        /// </summary>
         private void rbbStart_Click(object sender, EventArgs e)
         {
             frmex = new start.exercise();
@@ -138,7 +143,6 @@ namespace Calculate
             frmex.FormBorderStyle = FormBorderStyle.None;
             frmex.Show();
         }
-
 
         /// <summary>
         /// 开始启动考试
@@ -280,6 +284,8 @@ namespace Calculate
         /// </summary>
         private void ribbonButton19_Click(object sender, EventArgs e)
         {
+            this.label1.BackColor = Color.FromArgb(190, 208, 232);
+            label_username.BackColor = Color.FromArgb(190, 208, 232);
             ribbonButton19.Checked = true;
             ribbonButton20.Checked = false;
             ribbonButton21.Checked = false;
@@ -293,6 +299,8 @@ namespace Calculate
         /// </summary>
         private void ribbonButton20_Click(object sender, EventArgs e)
         {
+            this.label1.BackColor = Color.FromArgb(190, 208, 232);
+            label_username.BackColor = Color.FromArgb(190, 208, 232);
             ribbonButton19.Checked = false;
             ribbonButton20.Checked = true;
             ribbonButton21.Checked = false;
@@ -306,6 +314,8 @@ namespace Calculate
         /// </summary>
         private void ribbonButton21_Click(object sender, EventArgs e)
         {
+            this.label1.BackColor = Color.White;
+            label_username.BackColor = Color.White;
             ribbonButton19.Checked = false;
             ribbonButton20.Checked = false;
             ribbonButton21.Checked = true;
@@ -373,6 +383,7 @@ namespace Calculate
                 dr["Time"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 dt.Rows.Add(dr);
                 Program.ScoreSet.WriteXml(Program.ScoreXML);
+                MessageBox.Show("保存成功！");
             }
         }
 
@@ -410,6 +421,17 @@ namespace Calculate
             frmscores.TopMost = true;
             frmscores.FormBorderStyle = FormBorderStyle.None;
             frmscores.Show();
+        }
+
+        /// <summary>
+        /// 打开个人基本信息，可以修改
+        /// 作者：田强
+        /// 最后修改时间：2016-10-21
+        /// </summary>
+        private void ribbonButton10_Click(object sender, EventArgs e)
+        {
+            UserInfo frmuserinfo = new UserInfo();
+            frmuserinfo.ShowDialog();
         }
 
     }

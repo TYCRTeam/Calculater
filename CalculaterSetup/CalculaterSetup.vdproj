@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_822EAC267FC1018EFC8E28B165E667BF"
+        "OwnerKey" = "8:_56D19FE8099044A988044B5013F634FD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_933986CCE27E4250BB112EA6E4B69F53"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -35,6 +41,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_56D19FE8099044A988044B5013F634FD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_822EAC267FC1018EFC8E28B165E667BF"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -70,6 +82,11 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 (x86 和 x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0"
+                    }
                     "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
                     {
                     "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 和 x64)"
@@ -105,6 +122,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -135,6 +165,37 @@
         }
         "File"
         {
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_822EAC267FC1018EFC8E28B165E667BF"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ZedGraph, Version=5.0.9.41461, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_822EAC267FC1018EFC8E28B165E667BF"
+                    {
+                    "Name" = "8:ZedGraph.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:ZedGraph.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_3A2EA42C534E44A0ACE32894A8E18689"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_933986CCE27E4250BB112EA6E4B69F53"
             {
             "SourcePath" = "8:..\\Calculate\\Calculator.net.ico"
@@ -254,7 +315,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:四则运算"
         "ProductCode" = "8:{6A9C0565-A94F-4FC6-9F44-6945E6DBE080}"
-        "PackageCode" = "8:{2EE88F28-584F-454E-882A-189C48A35CD6}"
+        "PackageCode" = "8:{4F3A33AA-2378-423A-92C1-3D6654FE4A7E}"
         "UpgradeCode" = "8:{AFADB377-FCE4-48EB-9E34-D8F5D64B57BC}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

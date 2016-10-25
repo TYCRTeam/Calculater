@@ -39,6 +39,11 @@ namespace Calculate.start
         {
             Random re = new Random();
             DataTable dt = Program.ErrorSet.Tables[0];
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("还没有过错题记录哦！");
+                return;
+            }
             int index = re.Next(0, dt.Rows.Count-1);
             DataRow item = dt.Rows[index];
 

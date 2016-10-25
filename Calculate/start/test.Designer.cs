@@ -64,7 +64,7 @@
             this.label_RightResult.AutoSize = true;
             this.label_RightResult.BackColor = System.Drawing.Color.Transparent;
             this.label_RightResult.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold);
-            this.label_RightResult.Location = new System.Drawing.Point(625, 88);
+            this.label_RightResult.Location = new System.Drawing.Point(731, 88);
             this.label_RightResult.Name = "label_RightResult";
             this.label_RightResult.Size = new System.Drawing.Size(129, 35);
             this.label_RightResult.TabIndex = 15;
@@ -175,7 +175,7 @@
             this.textBox_answer.Font = new System.Drawing.Font("宋体", 26.25F, System.Drawing.FontStyle.Bold);
             this.textBox_answer.Location = new System.Drawing.Point(503, 81);
             this.textBox_answer.Name = "textBox_answer";
-            this.textBox_answer.Size = new System.Drawing.Size(118, 47);
+            this.textBox_answer.Size = new System.Drawing.Size(227, 47);
             this.textBox_answer.TabIndex = 13;
             // 
             // label_type

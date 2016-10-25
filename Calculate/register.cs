@@ -49,13 +49,20 @@ namespace Calculate
                     return;
                 }
                // DataBase.ConnectServerDataBase();
-                string sql = "INSERT INTO Users VALUES ('"+email+"','"+password +"','"+realname+"','"+nation+"','"+province+"','"+city+"','"+school+"','"+classname+"','"+sex+"','"+birthday+"')";
+                string sql = "INSERT INTO Users VALUES ('" + email + "','" + password + "','" + realname + "','" + nation + "','" + province + "','" + city + "','" + school + "','" + classname + "','" + sex + "','" + birthday + "','4736776','0')";
                 if (login.filterSql(email + password + realname + nation + province + city + school + classname + sex + birthday) == 1)
                 {
                     MessageBox.Show("输入了非法字符！");
                     return;
                 }
                 DataBase.ExecuteNonQuery(sql);
+                SendEmail._from = "13931740552@163.com";
+                SendEmail.psd = "hebeidaxue521";
+                SendEmail._to = email;
+                SendEmail._subject = "四则运算软件注册验证码";
+                SendEmail._body = "感谢您使用四则运算软件，本次注册的验证码为：4736776";
+                SendEmail.send();
+                MessageBox.Show("注册成功！请登录您的邮箱获取验证码");
                 this.Close();
             }
         }
@@ -72,8 +79,8 @@ namespace Calculate
 
         private void register_Load(object sender, EventArgs e)
         {
-            DataTable dt = DataBase.TableResult("SELECT MAX(UserID) FROM Users");
-            this.textBox_userid.Text = (Convert.ToInt16(dt.Rows[0][0].ToString().Trim()) + 1).ToString();
+            //DataTable dt = DataBase.TableResult("SELECT MAX(UserID) FROM Users");
+            //this.textBox_userid.Text = (Convert.ToInt16(dt.Rows[0][0].ToString().Trim()) + 1).ToString();
         }
 
         private void textBox_birth_MouseClick(object sender, MouseEventArgs e)

@@ -143,6 +143,12 @@
     <Compile Include="start\test_setting.Designer.cs">
       <DependentUpon>test_setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="check\testGrade.resx">
       <DependentUpon>testGrade.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="start\test_setting.resx">
       <DependentUpon>test_setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -223,6 +232,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Calculator.net.ico" />
+    <None Include="picture\bg2.png" />
     <None Include="picture\bg5.png" />
     <None Include="picture\bg4.jpg" />
     <None Include="picture\bg1.png" />
